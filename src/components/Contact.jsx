@@ -1,23 +1,51 @@
 import { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
-// import emailjs from '@emailjs/browser'
+import emailjs from '@emailjs/browser'
 
 import { styles } from '../style.js'
-// import { Earthcanvas } from './canvas'
+import { EarthCanvas } from './canvas'
 import { SectionWrapper } from '../hoc'
 import { slideIn } from '../utils/motion.js'
 
 const Contact = () => {
   const formRef = useRef();
-  const [form, setform] = useState({
+  const [form, setForm] = useState({
     name: '',
     email: '',
     message: '',
   })
-  const [loading, setloading] = useState(false)
+  const [loading, setLoading] = useState(false)
 
-  const changeHandler = (e) => {}
-  const submitHandler = (e) => {}
+  const changeHandler = (e) => {
+    const { name, value } = e.target;
+    setForm({...form, [name]: value})
+  }
+  const submitHandler = (e) => {
+    e.preventDefault();
+    setLoading(true)
+    emailjs.send(
+      "service_nlx4pem", "template_vcasj6p", {
+        from_name: form.name,
+        to_name: "Hassan",
+        from_email: form.email,
+        to_email: "hassanchowdhry0@gmail.com",
+        message: form.message
+      },
+      "QEGNozwDtSR_OwsPB"
+    ).then(() => {
+      setLoading(false)
+      alert("Thank you. I will get back to you as soon as possible.")
+      setForm({
+        name: '',
+        email: '',
+        message: ''
+      })
+    }, (error) => {
+      setLoading(false)
+      console.error(error)
+      alert("Something went wrong.")
+    });
+  }
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
       <motion.div 
@@ -85,6 +113,13 @@ const Contact = () => {
              {loading ? "Submitting..." : "Submit"}
             </button>
           </form>
+      </motion.div>
+
+      <motion.div 
+        variants={slideIn('right', "tween", 0.2, 1)}
+        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
+      >
+        <EarthCanvas />
       </motion.div>
     </div>
   )
