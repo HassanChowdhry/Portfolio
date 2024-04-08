@@ -1,5 +1,3 @@
-// change to personal info
-
 import {
   mobile,
   backend,
@@ -10,20 +8,20 @@ import {
   html,
   css,
   reactjs,
-  redux,
   tailwind,
   nodejs,
-  mongodb,
   git,
   figma,
+  mongodb,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
+  dalhousie,
+  upwork,
+  gallery,
+  links,
+  hikma,
+  portfolio,
+  leetbot,
+  tweet,
   threejs,
 } from "../assets";
 
@@ -37,6 +35,10 @@ export const navLinks = [
     title: "Work",
   },
   {
+    id: "projects",
+    title: "Projects",
+  },
+  {
     id: "contact",
     title: "Contact",
   },
@@ -44,32 +46,25 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Full-Stack Developer",
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Teaching Assistant",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
-    icon: backend,
+    title: "Software Developer",
+    icon: creator,
   },
   {
-    title: "Content Creator",
-    icon: creator,
+    title: "Student",
+    icon: backend,
   },
 ];
 
 const technologies = [
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
+  //languages
   {
     name: "JavaScript",
     icon: javascript,
@@ -78,190 +73,343 @@ const technologies = [
     name: "TypeScript",
     icon: typescript,
   },
+  // {
+  //   name: "Python",
+  //   icon: html,//TODO:
+  // },
+  // {
+  //   name: "C/C++",
+  //   icon: css, //TODO:
+  // },
+  // {
+  //   name: "SQL",
+  //   icon: javascript, //TODO:
+  // },
+  // {
+  //   name: "Java",
+  //   icon: typescript, //TODO:
+  // },
+  {
+    name: "HTML 5",
+    icon: html,
+  },
+  {
+    name: "CSS 3",
+    icon: css,
+  },
+  // Frameworks
   {
     name: "React JS",
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
     name: "Node JS",
     icon: nodejs,
   },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
+  // {
+  //   name: "Express JS",
+  //   icon: reactjs, //TODO:
+  // },
+  // {
+  //   name: "Angular JS",
+  //   icon: nodejs, //TODO:
+  // },
+  // {
+  //   name: "Vite",
+  //   icon: reactjs, //TODO:
+  // },
+  // {
+  //   name: "Django",
+  //   icon: nodejs, //TODO:
+  // },
+  // {
+  //   name: "SCSS/SASS",
+  //   icon: nodejs, //TODO:
+  // },
+  // {
+  //   name: "Cypress",
+  //   icon: reactjs, //TODO:
+  // },
+  // {
+  //   name: "JUnit",
+  //   icon: nodejs, //TODO:
+  // },
+  // {
+  //   name: "Jest",
+  //   icon: nodejs, //TODO:
+  // },
+  //libraries
   {
     name: "Three JS",
     icon: threejs,
   },
   {
-    name: "git",
-    icon: git,
+    name: "Tailwind CSS",
+    icon: tailwind,
   },
-  {
-    name: "figma",
-    icon: figma,
-  },
+  // {
+  //   name: "JQuery",
+  //   icon: nodejs, //TODO:
+  // },
+  // {
+  //   name: "Pandas",
+  //   icon: reactjs, //TODO:
+  // },
+  // {
+  //   name: "NumPy",
+  //   icon: nodejs, //TODO:
+  // },
+  // {
+  //   name: "Matplotlib",
+  //   icon: nodejs, //TODO:
+  // },
+  // {
+  //   name: "SciPy",
+  //   icon: reactjs, //TODO:
+  // },
+  // {
+  //   name: "Discord API",
+  //   icon: nodejs, //TODO:
+  // },
+  //devops/cloud
   {
     name: "docker",
     icon: docker,
   },
+  // {
+  //   name: "Amazon Web Services (AWS)",
+  //   icon: docker, //TODO:
+  // },
+  // {
+  //   name: "Firebase",
+  //   icon: docker, //TODO:
+  // },
+  // Dev Tools
+  {
+    name: "git",
+    icon: git, 
+  },
+  // {
+  //   name: "Github",
+  //   icon: figma, //TODO:
+  // },
+  // {
+  //   name: "GitLab",
+  //   icon: git, //TODO:
+  // },
+  // {
+  //   name: "Postman",
+  //   icon: figma, //TODO:
+  // },
+  // {
+  //   name: "MySQL",
+  //   icon: git, //TODO:
+  // },
+  // {
+  //   name: "PostgreSQL",
+  //   icon: figma, //TODO:
+  // },
+  {
+    name: "MongoDB",
+    icon: mongodb, //TODO:
+  },
+  {
+    name: "figma",
+    icon: figma, 
+  }
 ];
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
-    iconBg: "#383E56",
-    date: "March 2020 - April 2021",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "Teaching Assistant (TA)",
+    company_name: "Dalhousie University",
+    icon: dalhousie,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "May 2023 - Jan 2024",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Boosted student performance by 25% by implementing personalized tutoring strategies.",
+      "Elevated code quality to industry standards by providing constructive feedback on 100+ assignments.",
+      "Assisted in weekly labs for 50+ students, enhancing their practical understanding of front-end concepts.",
+      "Proctored course final exam for 150+ students, ensuring compliance with academic policies."
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
+    title: "Full-Stack Developer",
+    company_name: "Upwork Freelancer",
+    icon: upwork,
     iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    date: "May 2023 - Dec 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-];
-
-const testimonials = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
+      "Successfully migrated and rewrote a web application, improving UI/UX and code quality. This resulted in a 20% performance improvement.",
+      "Improved test coverage by introducing API and UI end-to-end tests, achieving a 20% reduction in reported issues.",
+      "Optimized existing RESTful and WebSocket services by removing dead code and increasing unit test coverage to 90% (previously at 50%)."
+    ]
+  }
 ];
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Portfolio",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Engineered an interactive website showcasing technical skills, successful projects, and professional experience, leading to heightened user engagement, increased inquiries, and networking opportunities.",
     tags: [
       {
-        name: "react",
+        name: "React",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "Vite",
+        color: "violet-text-gradient",
+      },
+      {
+        name: "Three.js",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "TailwindCSS",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
-        color: "pink-text-gradient",
+        name: "AWS",
+        color: "orange-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: portfolio,
+    source_code_link: "https://github.com/HassanChowdhry/Portfolio",
   },
   {
-    name: "Job IT",
+    name: "Photo Gallery",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Designed and developed a photography-centric full stack application with a user and database photo gallery, elevating engagement through the integration of profile photos.",
     tags: [
       {
-        name: "react",
+        name: "React",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "Node.js",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "Express.js",
         color: "pink-text-gradient",
       },
+      {
+        name: "MySQL",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "AWS",
+        color: "orange-text-gradient",
+      },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: gallery,
+    source_code_link: "https://github.com/HassanChowdhry/PhotoGallery-V2",
   },
   {
-    name: "Trip Guide",
+    name: "Google Links",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Developed an open-source web app optimizing research productivity by scraping and organizing Google search data into custom Excel sheets, boosting data collection efficiency by 30%.",
     tags: [
       {
-        name: "nextjs",
+        name: "React",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "Javascript",
+        color: "yellow-text-gradient",
+      },
+      {
+        name: "Excel",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "Firebase",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "Figma",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: links,
+    source_code_link: "https://github.com/HassanChowdhry/GoogleLinks",
+  },
+  {
+    name: "Hikma AI",
+    description:
+      "Led the development of an Artificial Intelligence (AI) discovery tool, resulting in a 15% increase in community-generated ideas and fostering a culture of innovation within the community.",
+    tags: [
+      {
+        name: "React",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "TypeScript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "TailwindCSS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "MaterialUI",
+        color: "violet-text-gradient",
+      },
+      {
+        name: "Firebase",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: hikma,
+    source_code_link: "https://github.com/HassanChowdhry/hikma-ai-frontend",
+  },
+  {
+    name: "Leetcode Stats Bot",
+    description:
+      "Engineered a custom Discord bot designed to analyze Leetcode statistics and performance metrics for the competitive programming community.",
+    tags: [
+      {
+        name: "Python",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Discord API",
+        color: "violet-text-gradient",
+      },
+      {
+        name: "Pandas",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: leetbot,
+    source_code_link: "https://github.com/HassanChowdhry/Leetcode-Stats-Bot",
+  },
+  {
+    name: "Tweet Generator",
+    description:
+      "Launched an open-source web application to make customized tweets. The user fills out input forms, which updates and renders the tweet display asynchronously.",
+    tags: [
+      {
+        name: "JavaScript",
+        color: "yellow-text-gradient",
+      },
+      {
+        name: "HTML5",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "CSS3",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Bootstrap",
+        color: "violet-text-gradient",
+      },
+    ],
+    image: tweet,
+    source_code_link: "https://hassanchowdhry.github.io/Tweet-Generator/",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, projects };

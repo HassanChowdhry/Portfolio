@@ -16,19 +16,19 @@ import javascript from "./tech/javascript.png";
 import mongodb from "./tech/mongodb.png";
 import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
-import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+import dalhousie from "./company/dalhousie.png";
+import upwork from "./company/upwork.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import gallery from './projects/gallery.png';
+import portfolio from './projects/portfolio.png';
+import leetbot from './projects/leetbot.png';
+import hikma from './projects/hikma.png';
+import links from './projects/links.png';
+import tweet from './projects/tweet.png';
 
 export {
   logo,
@@ -48,15 +48,15 @@ export {
   mongodb,
   nodejs,
   reactjs,
-  redux,
   tailwind,
   typescript,
   threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
-  carrent,
-  jobit,
-  tripguide,
+  dalhousie,
+  upwork,
+  gallery,
+  links,
+  hikma,
+  portfolio,
+  leetbot,
+  tweet
 };
