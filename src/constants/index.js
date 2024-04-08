@@ -240,9 +240,11 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "May 2023 - Dec 2023",
     points: [
-      "Successfully migrated and rewrote a web application, improving UI/UX and code quality. This resulted in a 20% performance improvement.",
+      "Migrated and rewrote a web app, enhancing UI/UX and code quality, resulting in a 20% performance boost.",
       "Improved test coverage by introducing API and UI end-to-end tests, achieving a 20% reduction in reported issues.",
-      "Optimized existing RESTful and WebSocket services by removing dead code and increasing unit test coverage to 90% (previously at 50%)."
+      "Optimized RESTful and WebSocket services, increasing unit test coverage from 50% to 90%.",
+      "Ensured all automated tests were maintainable and scalable over time, contributing to long-term project success.",
+      "Received positive feedback from end-users, indicating a 25% increase in overall satisfaction.",
     ]
   }
 ];
