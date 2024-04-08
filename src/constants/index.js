@@ -270,7 +270,7 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "AWS",
+        name: "Firebase",
         color: "orange-text-gradient",
       },
     ],
