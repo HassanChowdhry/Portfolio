@@ -345,6 +345,7 @@ const projects = [
     ],
     image: portfolio,
     source_code_link: "https://github.com/HassanChowdhry/Portfolio",
+    demo_link: "https://hassanchowdhryportfolio.web.app/",
   },
   {
     name: "Photo Gallery",
@@ -374,6 +375,7 @@ const projects = [
     ],
     image: gallery,
     source_code_link: "https://github.com/HassanChowdhry/PhotoGallery-V2",
+    demo_link: "https://d17o0fjvg61p4q.cloudfront.net/gallery",
   },
   {
     name: "Google Links",
@@ -403,6 +405,7 @@ const projects = [
     ],
     image: links,
     source_code_link: "https://github.com/HassanChowdhry/GoogleLinks",
+    demo_link: "https://links-cf02b.web.app/home",
   },
   {
     name: "Hikma AI",
@@ -432,6 +435,7 @@ const projects = [
     ],
     image: hikma,
     source_code_link: "https://github.com/HassanChowdhry/hikma-ai-frontend",
+    demo_link: "https://hikma-ai.web.app/about",
   },
   {
     name: "Leetcode Stats Bot",
@@ -453,6 +457,7 @@ const projects = [
     ],
     image: leetbot,
     source_code_link: "https://github.com/HassanChowdhry/Leetcode-Stats-Bot",
+    demo_link: "https://github.com/HassanChowdhry/Leetcode-Stats-Bot",
   },
   {
     name: "Tweet Generator",
@@ -477,7 +482,8 @@ const projects = [
       },
     ],
     image: tweet,
-    source_code_link: "https://hassanchowdhry.github.io/Tweet-Generator/",
+    source_code_link: "https://github.com/HassanChowdhry/Tweet-Generator",
+    demo_link: "https://hassanchowdhry.github.io/Tweet-Generator/",
   },
 ];
 

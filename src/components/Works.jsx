@@ -6,30 +6,17 @@ import { SectionWrapper } from '../hoc';
 import { projects } from '../constants';
 import { fadeIn } from '../utils/motion'
 
-const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
+const ProjectCard = ({ index, name, description, tags, image, source_code_link, demo_link }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index*0.35, 0.5)}>
       <Tilt options={{
         max: 45, scale: 1, speed: 450
       }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full image-box"
       >
         <div className='relative w-full h-[230px]'>
-          <img src={image} alt={name} className='w-full h-full object-cover rounded-2xl'/>
+          <img src={image} alt={name} className='w-full h-full object-cover rounded-2xl portfolio-image'/>
           <div className='absolute flex inset-0 justify-end m-3 card-img_hover'>
-            <div 
-              onClick={() => window.open(source_code_link, "_blank")}
-              className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
-            >
-              <img src={github} alt="github" className='w-1/2 h-1/2 object-contain'/>
-            </div>
-            {/* Project URL */}
-            {/* <div 
-              onClick={() => window.open(source_code_link, "_blank")}
-              className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
-            >
-              <img src={github} alt="github" className='w-1/2 h-1/2 object-contain'/>
-            </div> */}
           </div>
         </div>
         <div className='mt-5'>
@@ -42,6 +29,20 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
                 #{tag.name}
               </p>
             ))}
+        </div>
+        <div className='content'>
+          <button
+            className="btn"
+            onClick={() => window.open(source_code_link, "_blank")}
+          >
+            Github
+          </button>
+          <button
+            className="btn"
+            onClick={() => window.open(demo_link, "_blank")}
+          >
+            Live Demo
+          </button>
         </div>
       </Tilt>
     </motion.div>

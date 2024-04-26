@@ -26,9 +26,19 @@ const [toggle, setToggle] = useState(false);
                 hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(title)}
             >
+              
               <a href={`#${id}`}>{title}</a>
             </li>
           ))}
+          <li 
+            key="resume"
+            className={`${active === "resume" ? "text-white": "text-secondary"} 
+              hover:text-white text-[18px] font-medium cursor-pointer`}
+            onClick={() => setActive("resume")}
+          >
+            {/* TODO:set downloadble resume */}
+            <a href={``}>Resume</a>
+          </li>
         </ul>
   
         <div className='sm:hidden flex felx-1 justify-end items-center'>
@@ -52,6 +62,19 @@ const [toggle, setToggle] = useState(false);
                   <a href={`#${id}`}>{title}</a>
                 </li>
               ))}
+
+              <li 
+                key="resume"
+                className={`${active === "resume" ? "text-white": "text-secondary"} 
+                  font-poppins text-[16px] font-medium cursor-pointer`}
+                onClick={() => {
+                  setToggle(!toggle);
+                  setActive("resume");
+                }}
+              >
+                {/* TODO:set downloadble resume */}
+                <a href={``}>Resume</a>
+              </li>              
             </ul>
           </div>
         </div>
