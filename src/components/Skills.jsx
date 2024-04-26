@@ -4,7 +4,7 @@ import { styles } from '../style';
 
 const Skills = ({title, skill, index, fade}) => {
   return (
-    <motion.div variants={fadeIn(`${fade}`, "tween", index*0.5, 1)} className={`py-5`}>
+    <motion.div variants={fadeIn(`${fade}`, "tween", index*0.4, 0.75)} className={`py-5`}>
       <h1 className={`${styles.heroSubText} my-4`}>{title}</h1>
       <div className="flex flex-row flex-wrap justify-left gap-10">
         {skill.map(({name, icon, color}) => (

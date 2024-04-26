@@ -52,6 +52,7 @@ import leetbot from './projects/leetbot.png';
 import hikma from './projects/hikma.png';
 import links from './projects/links.png';
 import tweet from './projects/tweet.png';
+import resume from './resume/HassanChowdhry_Resume.pdf';
 
 export {
   logo,
@@ -104,5 +105,6 @@ export {
   gitlab,
   postman,
   mysql,
-  postgresql
+  postgresql,
+  resume
 };

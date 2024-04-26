@@ -2,9 +2,9 @@ import { BrowserRouter } from "react-router-dom";
 import {About, Contact, Experience, Hero, Navbar, Tech, Works, StarsCanvas} from "./components";
 
 function App() {
-// TODO: Pacman loader
-
-// TODO: downloadable resume
+  // TODO: socials linked, leet, gh, upwork
+  
+  // TODO: Pacman loader
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-primary">

@@ -1,8 +1,8 @@
-import {useEffect, useState} from 'react'
+import {useState} from 'react'
 import { Link } from 'react-router-dom';
 import { styles } from '../style';
 import { navLinks } from '../constants';
-import { logo, menu, close } from '../assets';
+import { logo, menu, close, resume } from '../assets';
 
 const Navbar = () => {
 const [active, setActive] = useState("");
@@ -36,8 +36,7 @@ const [toggle, setToggle] = useState(false);
               hover:text-white text-[18px] font-medium cursor-pointer`}
             onClick={() => setActive("resume")}
           >
-            {/* TODO:set downloadble resume */}
-            <a href={``}>Resume</a>
+            <a href={resume} download="Hassan_Resume">Resume</a>
           </li>
         </ul>
   
@@ -72,8 +71,7 @@ const [toggle, setToggle] = useState(false);
                   setActive("resume");
                 }}
               >
-                {/* TODO:set downloadble resume */}
-                <a href={``}>Resume</a>
+                <a href={resume} download="Hassan_Resume">Resume</a>
               </li>              
             </ul>
           </div>
