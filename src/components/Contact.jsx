@@ -42,7 +42,6 @@ const Contact = () => {
       })
     }, (error) => {
       setLoading(false)
-      console.error(error)
       alert("Something went wrong.")
     });
   }

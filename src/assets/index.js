@@ -19,6 +19,29 @@ import reactjs from "./tech/reactjs.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import angular from "./tech/angular.png";
+import express from "./tech/express.png";
+import sql from "./tech/sql.png";
+import vite from "./tech/vite.png";
+import java from "./tech/java.png";
+import python from "./tech/python.png";
+import c from "./tech/c.png";
+import django from "./tech/django.png";
+import cypress from "./tech/cypress.png";
+import junit from "./tech/junit.png";
+import jest from "./tech/jest.png";
+import jquery from "./tech/jquery.png";
+import pandas from "./tech/pandas.png";
+import numpy from "./tech/numpy.png";
+import matplot from "./tech/matplot.png";
+import scipy from "./tech/scipy.png";
+import discord from "./tech/discord.png";
+import aws from "./tech/aws.png";
+import firebase from "./tech/firebase.png";
+import gitlab from "./tech/gitlab.png";
+import postman from "./tech/postman.png";
+import mysql from "./tech/mysql.png";
+import postgresql from "./tech/postgresql.png";
 
 import dalhousie from "./company/dalhousie.png";
 import upwork from "./company/upwork.png";
@@ -58,5 +81,28 @@ export {
   hikma,
   portfolio,
   leetbot,
-  tweet
+  tweet,
+  angular,
+  express,
+  sql,
+  java,
+  vite,
+  python,
+  c,
+  django,
+  cypress,
+  junit,
+  jest,
+  jquery,
+  pandas,
+  numpy,
+  matplot,
+  scipy,
+  discord,
+  aws,
+  firebase,
+  gitlab,
+  postman,
+  mysql,
+  postgresql
 };

@@ -144,6 +144,128 @@
   -webkit-text-fill-color: transparent;
 }
 
+.tech {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: all 1s ease-in-out;
+  cursor: pointer;
+}
+
+.blue:hover {
+    /* background: -webkit-linear-gradient(#eee, #333); */
+    background: #56ccf2; /* fallback for old browsers */
+    background: linear-gradient(
+      -90deg,
+      #2f80ed 0%,
+      rgba(3, 76, 86, 0.35) 80%
+      );
+    background: -webkit-linear-gradient(
+      -90deg,
+      #2f80ed 0%,
+      rgba(3, 76, 86, 0.35) 80%
+      ); /* Chrome 10-25, Safari 5.1-6 */
+    color: #DADADB;
+}
+
+.green:hover {
+  background: #38ef7d; /* fallback for old browsers */
+  background: linear-gradient(
+    -90deg,
+    #38ef7d,
+    rgba(8, 97, 27, 0.25) 100%
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(
+    -90deg,
+    #38ef7d,
+    rgba(8, 97, 27, 0.25) 100%
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  color: #DADADB;
+}
+
+.yellow:hover {
+  background: #e0f902; /* fallback for old browsers */
+  background: linear-gradient(
+    -90deg,
+    #e0f902 0%,
+    rgba(80, 86, 3, 0.25) 100%
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(
+    -90deg,
+    #d7ef04 0%,
+    rgba(80, 86, 3, 0.25) 100%
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  color: #DADADB;
+}
+
+.orange:hover {
+  background: #f12711; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    -90deg,
+    #f12711,
+    #f5af19
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    -90deg,
+    #f12711,
+    #f5af19
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #DADADB;
+}
+
+.violet:hover {
+  background: #804dee;
+  background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
+  background: -webkit-linear-gradient(
+    -90deg,
+    #804dee 0%,
+    rgba(60, 51, 80, 0) 100%
+  );
+  color: #DADADB;
+}
+
+.pink:hover {
+  background: #ec008c;
+  background: linear-gradient(
+    -90deg,
+    #ec008c 0%,
+    #fc6767 100%
+  );
+  background: -webkit-linear-gradient(
+    -90deg,
+    #ec008c 0%,
+    #fc6767 100%
+  );
+  color: #DADADB;
+}
+
+.red:hover {
+  background: #f12711;
+  background: linear-gradient(
+    -90deg, 
+    #f12711 0%,
+    rgba(86, 13, 3, 0) 100%);
+  background: -webkit-linear-gradient(
+    -90deg,
+    #f12711 0%,
+    rgba(86, 13, 3, 0) 100%
+  );
+  color: #DADADB;
+}
+
+.black:hover {
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #DADADB;
+}
+
 /* canvas- styles */
 .canvas-loader {
   font-size: 10px;

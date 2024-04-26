@@ -12,7 +12,7 @@ import {
   nodejs,
   git,
   figma,
-  mongodb,
+  // mongodb,
   docker,
   dalhousie,
   upwork,
@@ -23,6 +23,30 @@ import {
   leetbot,
   tweet,
   threejs,
+  angular,
+  express,
+  sql,
+  java,
+  vite,
+  python,
+  github,
+  c,
+  django,
+  cypress,
+  junit,
+  jest,
+  jquery,
+  pandas,
+  numpy,
+  matplot,
+  scipy,
+  discord,
+  aws,
+  firebase,
+  gitlab,
+  postman,
+  mysql,
+  postgresql
 } from "../assets";
 
 export const navLinks = [
@@ -63,159 +87,202 @@ const services = [
   },
 ];
 
-const technologies = [
+const languages = [
   //languages
+  {
+    name: "Python",
+    icon: python,
+    color: "blue"
+    // color: "#123"
+  },
   {
     name: "JavaScript",
     icon: javascript,
+    color: "yellow"
+  },
+  {
+    name: "C/C++",
+    icon: c,
+    color: "blue"
+  },
+  {
+    name: "Java",
+    icon: java,
+    color: "red"
   },
   {
     name: "TypeScript",
     icon: typescript,
-  },
-  // {
-  //   name: "Python",
-  //   icon: html,//TODO:
-  // },
-  // {
-  //   name: "C/C++",
-  //   icon: css, //TODO:
-  // },
-  // {
-  //   name: "SQL",
-  //   icon: javascript, //TODO:
-  // },
-  // {
-  //   name: "Java",
-  //   icon: typescript, //TODO:
-  // },
-  {
-    name: "HTML 5",
-    icon: html,
+    color: "blue"
   },
   {
-    name: "CSS 3",
+    name: "SQL",
+    icon: sql,
+    color: "violet"
+  },
+  {
+    name: "CSS3",
     icon: css,
+    color: "blue"
   },
+  {
+    name: "HTML5",
+    icon: html,
+    color: "red"
+  }];
+  const frameworks = [
   // Frameworks
   {
     name: "React JS",
     icon: reactjs,
+    color: "blue"
   },
   {
     name: "Node JS",
     icon: nodejs,
+    color: "green"
+  },
+  {
+    name: "Express JS",
+    icon: express,
+    color: "green"
+  },
+  {
+    name: "Angular JS",
+    icon: angular,
+    color: "red"
+  },
+  {
+    name: "Vite",
+    icon: vite,
+    color: "violet"
+  },
+  {
+    name: "Django",
+    icon: django,
+    color: "green"
   },
   // {
-  //   name: "Express JS",
-  //   icon: reactjs, //TODO:
-  // },
-  // {
-  //   name: "Angular JS",
-  //   icon: nodejs, //TODO:
-  // },
-  // {
-  //   name: "Vite",
-  //   icon: reactjs, //TODO:
-  // },
-  // {
-  //   name: "Django",
-  //   icon: nodejs, //TODO:
-  // },
-  // {
   //   name: "SCSS/SASS",
-  //   icon: nodejs, //TODO:
+  //   icon: nodejs,
   // },
-  // {
-  //   name: "Cypress",
-  //   icon: reactjs, //TODO:
-  // },
-  // {
-  //   name: "JUnit",
-  //   icon: nodejs, //TODO:
-  // },
-  // {
-  //   name: "Jest",
-  //   icon: nodejs, //TODO:
-  // },
+  {
+    name: "Cypress",
+    icon: cypress, 
+    color: "green"
+  },
+  {
+    name: "JUnit",
+    icon: junit, 
+    color: "red"
+  },
+  {
+    name: "Jest",
+    icon: jest,
+    color: "red"
+  }];
+
+  const libraries = [
   //libraries
   {
     name: "Three JS",
     icon: threejs,
+    color: "black"
   },
   {
     name: "Tailwind CSS",
     icon: tailwind,
+    color: "blue"
   },
-  // {
-  //   name: "JQuery",
-  //   icon: nodejs, //TODO:
-  // },
-  // {
-  //   name: "Pandas",
-  //   icon: reactjs, //TODO:
-  // },
-  // {
-  //   name: "NumPy",
-  //   icon: nodejs, //TODO:
-  // },
-  // {
-  //   name: "Matplotlib",
-  //   icon: nodejs, //TODO:
-  // },
-  // {
-  //   name: "SciPy",
-  //   icon: reactjs, //TODO:
-  // },
-  // {
-  //   name: "Discord API",
-  //   icon: nodejs, //TODO:
-  // },
+  {
+    name: "JQuery",
+    icon: jquery,
+    color: "blue"
+  },
+  {
+    name: "Pandas",
+    icon: pandas,
+    color: "blue"
+  },
+  {
+    name: "NumPy",
+    icon: numpy,
+    color: "blue"
+  },
+  {
+    name: "Matplotlib",
+    icon: matplot,
+    color: "blue"
+  },
+  {
+    name: "SciPy",
+    icon: scipy,
+    color: "blue"
+  },
+  {
+    name: "Discord API",
+    icon: discord,
+    color: "violet"
+  }];
+
+  const devops = [
   //devops/cloud
   {
-    name: "docker",
+    name: "Docker",
     icon: docker,
+    color: "blue"
   },
-  // {
-  //   name: "Amazon Web Services (AWS)",
-  //   icon: docker, //TODO:
-  // },
-  // {
-  //   name: "Firebase",
-  //   icon: docker, //TODO:
-  // },
+  {
+    name: "AWS",
+    icon: aws,
+    color: "orange"
+  },
+  {
+    name: "Firebase",
+    icon: firebase,
+    color: "orange"
+  }];
+
+  const tools = [
   // Dev Tools
   {
-    name: "git",
+    name: "Git",
     icon: git, 
+    color: "orange"
   },
-  // {
-  //   name: "Github",
-  //   icon: figma, //TODO:
-  // },
-  // {
-  //   name: "GitLab",
-  //   icon: git, //TODO:
-  // },
-  // {
-  //   name: "Postman",
-  //   icon: figma, //TODO:
-  // },
-  // {
-  //   name: "MySQL",
-  //   icon: git, //TODO:
-  // },
-  // {
-  //   name: "PostgreSQL",
-  //   icon: figma, //TODO:
-  // },
   {
-    name: "MongoDB",
-    icon: mongodb, //TODO:
+    name: "Github",
+    icon: github,
+    color: "black"
   },
+  {
+    name: "GitLab",
+    icon: gitlab, 
+    color: "orange"
+  },
+  {
+    name: "Postman",
+    icon: postman,
+    color: "orange"
+  },
+  {
+    name: "MySQL",
+    icon: mysql,
+    color: "violet"
+  },
+  {
+    name: "PostgreSQL",
+    icon: postgresql,
+    color: "violet"
+  },
+  // {
+  //   name: "MongoDB",
+  //   icon: mongodb,
+  // },
   {
     name: "figma",
     icon: figma, 
+    color: "pink"
   }
 ];
 
@@ -414,4 +481,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, projects };
+export { services, languages, frameworks, libraries, devops, tools, experiences, projects };
