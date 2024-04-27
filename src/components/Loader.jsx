@@ -1,6 +1,6 @@
 import { Html, useProgress } from '@react-three/drei';
 
-// make into circle loader instead
+// TODO:make into circle loader instead
 const Loader = () => {
   const { progress } = useProgress();
   return (

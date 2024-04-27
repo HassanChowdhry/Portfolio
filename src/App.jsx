@@ -5,6 +5,7 @@ function App() {
   // TODO: socials linked, leet, gh, upwork
   
   // TODO: Pacman loader
+  // TODO: Remove comp for animated letters
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-primary">
