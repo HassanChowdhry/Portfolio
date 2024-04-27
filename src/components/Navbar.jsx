@@ -18,10 +18,6 @@ const [toggle, setToggle] = useState(false);
           <img src={logo} alt="logo" className='w-9 h-9 object-contain'/>
           <p className='text-white text-[18px] font-bold cursor-pointer flex'>Hassan Chowdhry&nbsp; </p>
         </Link>
-        
-        
-        {/* Add list of socials here */}
-
 
         <ul className='list-none hidden sm:flex flex-row gap-10'>
           {navLinks.map(({ id, title}) => (

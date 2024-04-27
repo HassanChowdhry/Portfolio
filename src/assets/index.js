@@ -54,6 +54,12 @@ import links from './projects/links.png';
 import tweet from './projects/tweet.png';
 import resume from './resume/HassanChowdhry_Resume.pdf';
 
+import { FaLinkedin } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
+import { FaGithub } from "react-icons/fa";
+import { FaUpwork } from "react-icons/fa6";
+
+
 export {
   logo,
   backend,
@@ -106,5 +112,9 @@ export {
   postman,
   mysql,
   postgresql,
-  resume
+  resume,
+  FaLinkedin,
+  FaGithub,
+  FaUpwork,
+  SiLeetcode
 };
