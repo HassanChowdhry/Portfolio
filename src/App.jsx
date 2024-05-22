@@ -2,7 +2,6 @@ import { BrowserRouter } from "react-router-dom";
 import {About, Contact, Experience, Hero, Navbar, Tech, Works, StarsCanvas} from "./components";
 
 function App() {  
-  // TODO: Pacman loader
   // TODO: Remove comp for animated letters
   return (
     <BrowserRouter>
