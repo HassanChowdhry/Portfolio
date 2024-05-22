@@ -5,11 +5,11 @@ import { resume } from '../assets';
 
 const QuickLinks = () => {  
   return (
-    <div className='flex gap-5'>
+    <div className='flex gap-5 flex-col md:flex-row'>
         {/* add buttons to Contact / About / Resume */}
         <motion.div variants={fadeIn("up", "tween", 1*0.8, 1.8)} >
           <a href='#about'>
-            <button className="animated-button">
+            <button className="animated-button w-full lg:animated-button">
               <FaArrowDown className="arr-2" />
               <span className="text">About Me</span>
               <span className="circle"></span>
@@ -19,7 +19,7 @@ const QuickLinks = () => {
         </motion.div>
         <motion.div variants={fadeIn("up", "tween", 2*0.8, 1.8)}>
         <a href={resume} download="HassanChowdhry_Resume">
-          <button className="animated-button">
+          <button className="animated-button w-full lg:animated-button">
             <FaDownload className="arr-2" />
             <span className="text">Resume</span>
             <span className="circle"></span>
