@@ -1,19 +1,8 @@
-import { Html, useProgress } from '@react-three/drei';
-
 const Loader = () => {
-  const { progress } = useProgress();
   return (
-    <Html>
+    <section className='w-full h-screen flex justify-center items-center'>
       <div className='loader'></div>
-      <p style={{
-        fontSize: 14,
-        color: '#fff',
-        fontWeight: 800,
-        marginTop: 25
-      }}>
-        {progress.toFixed(2)}%
-      </p>
-    </Html>
+    </section>
   )
 }
 

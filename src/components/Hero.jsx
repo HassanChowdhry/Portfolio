@@ -1,5 +1,4 @@
 // import {motion} from 'framer-motion';
-// import { useState, useEffect} from 'react';
 import { styles } from '../style';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../utils/motion';
@@ -9,22 +8,6 @@ import Lottie from 'react-lottie';
 import pc from './pc.json';
 
 const Hero = () => {
-  // const [windowSize, setWindowSize] = useState({ width: window.innerWidth, height: window.innerHeight });
-
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     setWindowSize({ width: window.innerWidth, height: window.innerHeight });
-  //   };
-
-  //   window.addEventListener('resize', handleResize);
-    
-  //   return () => {
-  //     window.removeEventListener('resize', handleResize);
-  //   };
-  // }, []);
-
-  // const lottieHeight = windowSize.height * 0.65;
-  // const lottieWidth = windowSize.width * 0.8;
 
   const name = "Hassan".split('');
   const intro = "Hi I'm ".split('')

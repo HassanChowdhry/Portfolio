@@ -1,14 +1,31 @@
 import { BrowserRouter } from "react-router-dom";
-import {About, Contact, Experience, Hero, Navbar, Tech, Works, StarsCanvas} from "./components";
+import { useState, useEffect } from "react";
+import { About, Contact, Experience, Hero, Navbar, Tech, Works, StarsCanvas, Loader } from "./components";
+import 'animate.css';
 
 function App() {  
-  // TODO: Remove comp for animated letters
+  const [isLoading, setLoading] = useState(true);
+  const [fadeClass, setFadeClass] = useState('animate__animated animate__fadeIn');
+
+  useEffect(() => {
+    if (isLoading) {
+      const toRef = setTimeout(() => {
+        setFadeClass('animate__animated animate__fadeOut');
+        setTimeout(() => {
+          setLoading(false);
+          setFadeClass('animate__animated animate__fadeIn');
+        }, 750);
+      }, 2000);
+      return () => clearTimeout(toRef);
+    }
+  }, [isLoading]);
+
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-primary">
         <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
           <Navbar />
-          <Hero />
+          {isLoading ? <div className={fadeClass}><Loader /></div> : <div className={fadeClass}><Hero /></div>}
         </div>
 
         <About />
