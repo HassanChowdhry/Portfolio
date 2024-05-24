@@ -22,7 +22,7 @@ const Hero = () => {
     <section className='w-full h-screen m-auto flex-1 item-center'>
       <div 
         className={`${styles.paddingX}
-        mx-auto flex flex-row items-start gap-5 mt-4`}>
+        mx-auto flex flex-row items-start gap-5 pt-4`}>
         
           <div className='flex flex-col justify-center items-center mt-5'>
             <div className='w-5 h-5 rounded-full bg-[#915eff]'/>

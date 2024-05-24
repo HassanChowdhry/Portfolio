@@ -1,3 +1,5 @@
+import { SectionWrapper } from '../hoc';
+
 const Loader = () => {
   return (
     <section className='w-full h-screen flex justify-center items-center'>
@@ -6,4 +8,4 @@ const Loader = () => {
   )
 }
 
-export default Loader
+export default SectionWrapper(Loader, "loader");

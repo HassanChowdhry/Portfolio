@@ -14,7 +14,7 @@ function App() {
         setTimeout(() => {
           setLoading(false);
           setFadeClass('animate__animated animate__fadeIn');
-        }, 750);
+        }, 650);
       }, 2000);
       return () => clearTimeout(toRef);
     }
