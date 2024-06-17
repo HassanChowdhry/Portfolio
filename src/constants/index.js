@@ -1,8 +1,4 @@
 import {
-  mobile,
-  backend,
-  creator,
-  web,
   javascript,
   typescript,
   html,
@@ -16,7 +12,6 @@ import {
   docker,
   dalhousie,
   upwork,
-  gallery,
   links,
   hikma,
   portfolio,
@@ -50,7 +45,10 @@ import {
   FaLinkedin,
   FaGithub,
   FaUpwork,
-  SiLeetcode
+  SiLeetcode,
+  pixis,
+  hassantree,
+  beatstream,
 } from "../assets";
 
 export const navLinks = [
@@ -295,6 +293,31 @@ const languages = [
 ];
 
 const experiences = [
+  //TODO: Update
+  {
+    title: "Software Developer",
+    company_name: "BOTR Solutions",
+    icon: dalhousie,
+    iconBg: "#E6DEDD",
+    date: "May 2024 - Aug 2024",
+    points: [
+      "Boosted student performance by 25% by implementing personalized tutoring strategies.",
+      "Elevated code quality to industry standards by providing constructive feedback on 100+ assignments.",
+      "Assisted in weekly labs for 50+ students, enhancing their practical understanding of front-end concepts.",
+    ],
+  },
+  {
+    title: "Together@Dal Computer Science Mentor",
+    company_name: "Dalhousie University",
+    icon: dalhousie,
+    iconBg: "#E6DEDD",
+    date: "Sep 2024 - Present",
+    points: [
+      "Boosted student performance by 25% by implementing personalized tutoring strategies.",
+      "Elevated code quality to industry standards by providing constructive feedback on 100+ assignments.",
+      "Assisted in weekly labs for 50+ students, enhancing their practical understanding of front-end concepts.",
+    ],
+  },
   {
     title: "Teaching Assistant (TA)",
     company_name: "Dalhousie University",
@@ -305,12 +328,11 @@ const experiences = [
       "Boosted student performance by 25% by implementing personalized tutoring strategies.",
       "Elevated code quality to industry standards by providing constructive feedback on 100+ assignments.",
       "Assisted in weekly labs for 50+ students, enhancing their practical understanding of front-end concepts.",
-      "Proctored course final exam for 150+ students, ensuring compliance with academic policies."
     ],
   },
   {
     title: "Full-Stack Developer",
-    company_name: "Upwork Freelancer",
+    company_name: "Upwork",
     icon: upwork,
     iconBg: "#E6DEDD",
     date: "May 2023 - Dec 2023",
@@ -319,7 +341,6 @@ const experiences = [
       "Improved test coverage by introducing API and UI end-to-end tests, achieving a 20% reduction in reported issues.",
       "Optimized RESTful and WebSocket services, increasing unit test coverage from 50% to 90%.",
       "Ensured all automated tests were maintainable and scalable over time, contributing to long-term project success.",
-      "Received positive feedback from end-users, indicating a 25% increase in overall satisfaction.",
     ]
   }
 ];
@@ -353,10 +374,10 @@ const projects = [
     ],
     image: portfolio,
     source_code_link: "https://github.com/HassanChowdhry/Portfolio",
-    demo_link: "https://hassanchowdhryportfolio.web.app/",
+    demo_link: "https://hassanchowdhry.live",
   },
   {
-    name: "Photo Gallery",
+    name: "Pixis",
     description:
       "Designed and developed a photography-centric full stack application with a user and database photo gallery, elevating engagement through the integration of profile photos.",
     tags: [
@@ -381,9 +402,70 @@ const projects = [
         color: "orange-text-gradient",
       },
     ],
-    image: gallery,
+    image: pixis,
     source_code_link: "https://github.com/HassanChowdhry/PhotoGallery-V2",
-    demo_link: "https://d17o0fjvg61p4q.cloudfront.net/gallery",
+    demo_link: "https://github.com/HassanChowdhry/PhotoGallery-V2",
+  },
+  //TODO: Update
+  {
+    name: "BeatStream",
+    description:
+      "Designed and developed a photography-centric full stack application with a user and database photo gallery, elevating engagement through the integration of profile photos.",
+    tags: [
+      {
+        name: "React",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Django",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Node.js",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Python",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Spotfiy API",
+        color: "green-text-gradient",
+      },
+    ],
+    image: beatstream,
+    source_code_link: "https://github.com/HassanChowdhry/BeatStream",
+    demo_link: "https://github.com/HassanChowdhry/BeatStream",
+  },
+  {
+    name: "HassanTree",
+    description:
+      "Designed and developed a photography-centric full stack application with a user and database photo gallery, elevating engagement through the integration of profile photos.",
+    tags: [
+      {
+        name: "Next.js",
+        color: "green-text-gradient",
+      },
+      {
+        name: "TypeScript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "SASS/SCSS",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "TailwindCSS",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Vercel",
+        color: "violet-text-gradient",
+      },
+    ],
+    image: hassantree,
+    source_code_link: "https://github.com/HassanChowdhry/HassanTree",
+    demo_link: "https://hassantree.vercel.app/",
   },
   {
     name: "Google Links",

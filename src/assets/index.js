@@ -46,7 +46,9 @@ import postgresql from "./tech/postgresql.png";
 import dalhousie from "./company/dalhousie.png";
 import upwork from "./company/upwork.png";
 
-import gallery from './projects/gallery.png';
+import pixis from './projects/pixis.png';
+import hassantree from './projects/hassantree.png';
+import beatstream from './projects/beatstream.png';
 import portfolio from './projects/portfolio.png';
 import leetbot from './projects/leetbot.png';
 import hikma from './projects/hikma.png';
@@ -83,7 +85,9 @@ export {
   threejs,
   dalhousie,
   upwork,
-  gallery,
+  pixis,
+  hassantree,
+  beatstream,
   links,
   hikma,
   portfolio,
