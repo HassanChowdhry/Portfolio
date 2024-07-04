@@ -18,6 +18,7 @@ const ExperienceCard = ({ experience }) => (
           src={experience.icon}
           alt={experience.company_name}
           className="w-[80%] h-[80%] object-contain"
+          loading="lazy"
         />
       </div>
     }

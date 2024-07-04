@@ -15,7 +15,7 @@ const [toggle, setToggle] = useState(false);
           setActive("");
           window.scrollTo(0, 0);
         }}>
-          <img src={logo} alt="logo" className='w-9 h-9 object-contain'/>
+          <img src={logo} alt="logo" className='w-9 h-9 object-contain' loading="lazy" />
           <p className='text-white text-[18px] font-bold cursor-pointer flex'>Hassan Chowdhry&nbsp; </p>
         </Link>
 
@@ -42,7 +42,7 @@ const [toggle, setToggle] = useState(false);
         </ul>
   
         <div className='sm:hidden flex felx-1 justify-end items-center'>
-          <img src={toggle ? close : menu} alt="menu" className='w-[28px] h-[28px] object-contain cursor-pointer'
+          <img loading="lazy" src={toggle ? close : menu} alt="menu" className='w-[28px] h-[28px] object-contain cursor-pointer'
             onClick={() => setToggle(!toggle)}></img>
           <div 
             className={`${!toggle ? 'hidden' : 'flex'} 

@@ -1,8 +1,4 @@
 import logo from "./logo.svg";
-import backend from "./backend.png";
-import creator from "./creator.png";
-import mobile from "./mobile.png";
-import web from "./web.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
@@ -55,6 +51,7 @@ import hikma from './projects/hikma.png';
 import links from './projects/links.png';
 import tweet from './projects/tweet.png';
 import resume from './resume/HassanChowdhry_Resume.pdf';
+import podtext_ai from './projects/podtext-ai.png';
 
 import { FaLinkedin } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
@@ -64,10 +61,6 @@ import { FaUpwork } from "react-icons/fa6";
 
 export {
   logo,
-  backend,
-  creator,
-  mobile,
-  web,
   github,
   menu,
   close,
@@ -120,5 +113,6 @@ export {
   FaLinkedin,
   FaGithub,
   FaUpwork,
-  SiLeetcode
+  SiLeetcode,
+  podtext_ai
 };

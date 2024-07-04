@@ -49,6 +49,7 @@ import {
   pixis,
   hassantree,
   beatstream,
+  podtext_ai
 } from "../assets";
 
 export const navLinks = [
@@ -301,9 +302,10 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "May 2024 - Aug 2024",
     points: [
-      "Boosted student performance by 25% by implementing personalized tutoring strategies.",
-      "Elevated code quality to industry standards by providing constructive feedback on 100+ assignments.",
-      "Assisted in weekly labs for 50+ students, enhancing their practical understanding of front-end concepts.",
+      "Revamped the company website with new designs, improving user experience and increasing engagement by 50%.",
+      "Achieved a 40% improvement in SEO ranking through strategic enhancements.",
+      "Automated CI/CD pipelines reducing deployment time by 60% and ensuring scalable, reliable delivery.",
+      "Developed comprehensive end-to-end backend systems for REST APIs, streamlining feature development.",
     ],
   },
   {
@@ -375,6 +377,36 @@ const projects = [
     image: portfolio,
     source_code_link: "https://github.com/HassanChowdhry/Portfolio",
     demo_link: "https://hassanchowdhry.live",
+  },
+  {
+    name: "PodText AI",
+    description:
+      "Spearheaded the development of a full-stack web application enabling users to create and publish podcasts using AI voice and image generation and text-to-speech technology.",
+    tags: [
+      {
+        name: "Next.js",
+        color: "violet-text-gradient",
+      },
+      {
+        name: "OpenAI",
+        color: "green-text-gradient",
+      },
+      {
+        name: "TypeScript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Convex",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "TailwindCSS",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: podtext_ai,
+    source_code_link: "https://github.com/HassanChowdhry/PodText-AI",
+    demo_link: "https://podtext-ai.vercel.app",
   },
   {
     name: "Pixis",

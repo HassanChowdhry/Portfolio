@@ -1,7 +1,6 @@
 import { Tilt } from 'react-tilt';
 import { motion } from 'framer-motion';
 import { styles } from '../style';
-import { github } from '../assets'
 import { SectionWrapper } from '../hoc';
 import { projects } from '../constants';
 import { fadeIn } from '../utils/motion'
@@ -15,7 +14,12 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
         className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full image-box"
       >
         <div className='relative w-full h-[230px]'>
-          <img src={image} alt={name} className='w-full h-full object-cover rounded-2xl portfolio-image'/>
+          <img 
+            src={image} 
+            alt={name} 
+            className='w-full h-full object-cover rounded-2xl portfolio-image'
+            loading="lazy"
+          />
           <div className='absolute flex inset-0 justify-end m-3 card-img_hover'>
           </div>
         </div>

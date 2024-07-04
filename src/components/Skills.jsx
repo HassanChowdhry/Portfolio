@@ -13,8 +13,11 @@ const Skills = ({title, skill, index, fade}) => {
               className={`w-48 tech h-auto bg-[#DADADB] ${color} rounded-lg text-center
               text-[#1D1E20] p-2 gap-1 flex items-center justify-center `}>
               
-              <img alt={name} src={icon}
-                className="w-8 h-8"/>
+              <img 
+                alt={name} src={icon}
+                loading="lazy"
+                className="w-8 h-8"
+              />
               <p>
                 {name}
               </p>
