@@ -18,7 +18,7 @@ const Chatbot = () => {
     .filter((message) => message.hidden !== true)
     .map((message) => <ChatMessage key={message.id} message={message.content} role={message.role} />)
   return (
-    <div className="bg-primary">
+    <div className="bg-hero-pattern">
       <div className="max-w-[850px] md:mx-auto h-screen flex flex-col">
         <Header
             onNewChat={clearThread}

@@ -22,7 +22,7 @@ export default function ChatMessage({ message, role }) {
             {icon}
             <p className="font-bold my-auto text-[18px] text-secondary">{name}</p>
           </section>
-          <div className="ml-10 flex-col">
+          <div className="ml-8 flex-col bg-card rounded-3xl py-3 px-5">
               <Markdown
                   className="text-white-100 markdown"
                   remarkPlugins={[remarkGfm]}
