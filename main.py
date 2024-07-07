@@ -140,19 +140,3 @@ async def post_thread_message(thread_id: str, message: CreateMessage):
     required_action=run.required_action
   )
   
-  
-# @app.post("/api/threads/{thread_id}/runs/{run_id}/tool")
-# async def post_tool_output(thread_id: str, run_id: str, tool_outputs: List[ToolOutput]):
-#   run = await client.beta.threads.runs.submit_tool_outputs(
-#     thread_id=thread_id,
-#     run_id=run_id,
-#     tool_outputs=tool_outputs
-#   )
-  
-#   return RunStatus(
-#     run_id=run.id,
-#     thread_id=thread_id,
-#     status=run.status,
-#     last_error=run.last_error,
-#     required_action=run.required_action
-#   )

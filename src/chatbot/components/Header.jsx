@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { styles } from '../../style';
 
 export default function Header({ onNewChat }) {
   const navigate = useNavigate();
@@ -12,7 +13,7 @@ export default function Header({ onNewChat }) {
         &larr; Go back
         </button>
       <div className="w-full bg-tertiary text-center py-2 px-4 rounded-lg outlined-none border-none shadow-lg shadow-primary">
-          <h1 className="text-3xl text-slate-200 font-semibold grow">Hassan AI</h1>
+          <h1 className={`${styles.heroSubText} text-slate-200 font-bold`}>Hassan AI</h1>
       </div>
       <button
         className={buttonStyle}
