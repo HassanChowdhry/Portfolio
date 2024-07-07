@@ -1,7 +1,8 @@
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { About, Contact, Experience, Hero, Navbar, Tech, Works, StarsCanvas, Loader } from "./components";
 import 'animate.css';
+import Chatbot from "./chatbot/Chatbot";
 
 function App() {  
   const [isLoading, setLoading] = useState(true);
@@ -22,21 +23,31 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="relative z-0 bg-primary">
-        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-          <Navbar />
-          {isLoading ? <div className={fadeClass}><Loader /></div> : <div className={fadeClass}><Hero /></div>}
-        </div>
+      <div className="min-h-[100vh] relative z-0 bg-primary">
+        <Routes>
+          <Route path="/" element={
+            <>
+            (        
+              <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+                <Navbar />
+                {isLoading ? <div className={fadeClass}><Loader /></div> : <div className={fadeClass}><Hero /></div>}
+              </div>
 
-        <About />
-        <Experience />
-        <Works />
-        <Tech />
+              <About />
+              <Experience />
+              <Works />
+              <Tech />
 
-        <div className="relative z-0">
-          <Contact />
-          <StarsCanvas />
-        </div>
+              <div className="relative z-0">
+                <Contact />
+                <StarsCanvas />
+              </div>
+            )
+            </>
+          } />
+
+          <Route path="/ai" element={<Chatbot />} />
+        </Routes>
       </div>
     </BrowserRouter>
   )
