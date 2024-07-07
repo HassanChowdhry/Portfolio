@@ -7,33 +7,45 @@ export const createNewThread = async () => {
     const res = await fetch(`${API_SERVER}/api/new`, {
       method: "POST",
     })
-    return res.json()
+    const data = await res.json()
+    return data
   } catch (error) {
     console.error(error)
   }
 }
 
 export const fetchThread = async (threadId) => {
+  if (!threadId) {
+    throw new Error("threadId is required")
+  }
   try {
     const res = await fetch(`${API_SERVER}/api/threads/${threadId}`)
-    return res.json()
+    const data = await res.json()
+    return data
   } catch (error) {
     console.error(error)
   }
 }
 
 export const fetchRun = async (threadId, runId) => {
+  if (!runId, !threadId) {
+    throw new Error("runId and threadId are required")
+  }
   try {
     const res = await fetch(`${API_SERVER}/api/threads/${threadId}/runs/${runId}`, {
       method: "GET",
     })
-    return res.json()
+    const data = await res.json()
+    return data
   } catch (error) {
     console.error(error)
   }
 }
 
 export const postMessage = async (threadId, message) => {
+  if (!threadId, !message) {
+    throw new Error("threadId and message are required")
+  }
   try {
     const res = await fetch(`${API_SERVER}/api/threads/${threadId}`, {
       method: "POST",
@@ -42,7 +54,8 @@ export const postMessage = async (threadId, message) => {
       },
       body: JSON.stringify({ content: message }),
     })
-    return res.json()
+    const data = await res.json()
+    return data
   } catch (error) {
     console.error(error)
   }

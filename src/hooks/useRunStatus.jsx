@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { runStates } from "./api";
 
 export default function useRunStatus(run) {
-  const [status, setStatus] = useState(undefined)
+  const [status, setStatus] = useState(null)
   const [processing, setProcessing] = useState(false)
 
   useEffect(() => {
@@ -11,7 +11,7 @@ export default function useRunStatus(run) {
     } else if (run?.status === "queued") {
       setStatus("Queued...")
     } else {
-      setStatus(undefined)
+      setStatus(null)
     }
   }, [run])
 

@@ -9,7 +9,7 @@ import useRunStatus from "../hooks/useRunStatus.jsx";
 import { postMessage } from "../hooks/api.js";
 
 const Chatbot = () => {
-  const [run, setRun] = useState(undefined)
+  const [run, setRun] = useState(null)
   const { threadId, messages, clearThread } = useThread(run, setRun);
   useRunPolling(threadId, run, setRun);
   const { status, processing } = useRunStatus(run);
