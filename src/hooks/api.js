@@ -1,6 +1,6 @@
 export const runStates = ["requires_action", "cancelled", "failed", "completed", "expired"]
 
-const API_SERVER = "http://127.0.0.1:8000"
+const API_SERVER = import.meta.env.VITE_LOCAL_SERVER
 
 export const createNewThread = async () => {
   try {

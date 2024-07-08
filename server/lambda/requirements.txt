@@ -1,0 +1,4 @@
+fastapi==0.111.0
+openai==1.35.10
+mangum==0.17.0
+python-dotenv==1.0.1
