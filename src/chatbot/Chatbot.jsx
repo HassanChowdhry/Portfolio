@@ -11,6 +11,7 @@ const Chatbot = () => {
   const [status, setStatus] = useState("Processing...")
   const [processing, setProcessing] = useState(true)
   const { threadId, messages, clearThread } = useThread(run, setRun, setProcessing, setStatus);
+  
   useEffect(() => {
     if (threadId) {
       setStatus(null);
@@ -23,7 +24,7 @@ const Chatbot = () => {
     .filter((message) => message.hidden !== true)
     .map((message) => <ChatMessage key={message.id} message={message.content} role={message.role} />)
   return (
-    <div className="bg-hero-pattern animate__animated animate__fadeIn">
+    <div className={`bg-hero-pattern animate__animated animate__fadeIn`}>
       <div className="max-w-[850px] md:mx-auto h-screen flex flex-col">
         <Header
             onNewChat={clearThread}

@@ -1,4 +1,4 @@
-import { MdSend } from "react-icons/md"
+import { IoIosSend } from "react-icons/io";
 import { useState } from "react"
 
 const ChatInput = ({ disabled, onSend }) => {
@@ -26,7 +26,7 @@ const ChatInput = ({ disabled, onSend }) => {
       disabled={disabled}
       className="hover:scale-105 duration-300 hover:bg-button border border-tertiary bg-tertiary py-3 px-8 w-fit font-bold shadow-lg shadow-primary rounded-xl text-white "
       >
-      <MdSend/>
+      <IoIosSend size={25} />
     </button>
   </form> 
   )
