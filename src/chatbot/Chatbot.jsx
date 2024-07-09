@@ -11,7 +11,7 @@ const Chatbot = () => {
   const [status, setStatus] = useState("Processing...")
   const [processing, setProcessing] = useState(true)
   const { threadId, messages, clearThread } = useThread(run, setRun, setProcessing, setStatus);
-  
+  console.log(import.meta.env.VITE_TEST)
   useEffect(() => {
     if (threadId) {
       setStatus(null);
