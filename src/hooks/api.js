@@ -1,6 +1,5 @@
 export const runStates = ["requires_action", "cancelled", "failed", "completed", "expired"]
-
-const API_SERVER = "http://127.0.0.1:8000"
+const API_SERVER = import.meta.env.VITE_LOCAL_SERVER
 
 export const createNewThread = async () => {
   try {
@@ -27,23 +26,8 @@ export const fetchThread = async (threadId) => {
   }
 }
 
-export const fetchRun = async (threadId, runId) => {
-  if (!runId, !threadId) {
-    throw new Error("runId and threadId are required")
-  }
-  try {
-    const res = await fetch(`${API_SERVER}/api/threads/${threadId}/runs/${runId}`, {
-      method: "GET",
-    })
-    const data = await res.json()
-    return data
-  } catch (error) {
-    console.error(error)
-  }
-}
-
 export const postMessage = async (threadId, message) => {
-  if (!threadId, !message) {
+  if (!threadId || !message) {
     throw new Error("threadId and message are required")
   }
   try {

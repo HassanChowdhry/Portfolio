@@ -11,7 +11,7 @@ const QuickLinks = () => {
           <Link to='/ai'>
             <button className="animated-button w-full">
               <SiOpenai className="arr-2" />
-              <span className="text">Talk to Hassan Ai</span>
+              <span className="text">Talk to Hassan AI</span>
               <span className="circle"></span>
               <SiOpenai className="arr-1" />
             </button>
