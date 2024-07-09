@@ -3,7 +3,6 @@ import { fadeIn } from '../utils/motion'
 
 export const Wrapper = ({fade, type, index, children, className }) => {
   const isMobile = window.innerWidth < 850;
-  console.log(isMobile)
   return (
     <>
       {isMobile ? (<div>{children}</div>) : (
