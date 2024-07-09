@@ -1,5 +1,5 @@
 export const runStates = ["requires_action", "cancelled", "failed", "completed", "expired"]
-const API_SERVER = import.meta.env.VITE_LOCAL_SERVER
+const API_SERVER = import.meta.env.VITE_API_SERVER
 
 export const createNewThread = async () => {
   try {
