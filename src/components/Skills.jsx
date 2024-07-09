@@ -1,5 +1,3 @@
-import { motion } from 'framer-motion';
-import { fadeIn } from '../utils/motion'
 import { styles } from '../style';
 import { Wrapper } from './Wrapper';
 

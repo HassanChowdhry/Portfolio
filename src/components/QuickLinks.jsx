@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import { fadeIn } from '../utils/motion';
 import { SiOpenai } from "react-icons/si";
 import { Link } from 'react-router-dom';
-// import { resume } from '../assets';
 
 const QuickLinks = () => {  
   return (
