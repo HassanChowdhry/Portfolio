@@ -6,7 +6,7 @@ import "./ChatMessage.css";
 export default function ChatMessage({ message, role }) {
   const isUser = role === "user";
     return (
-      <div className='flex-col mx-2 my-4 p-2'>
+      <div className='flex-col mx-2 my-4 p-2 animate__bounceIn'>
           <section className='flex gap-2'>
           <div className="rounded-full h-8 w-8 bg-slate-600 flex items-center justify-center font-semibold shrink-0">
             {isUser ? (<FaRegUser />) : (<img src="/logo.svg" alt="" />)}

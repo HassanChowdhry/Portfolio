@@ -20,6 +20,7 @@ const ChatInput = ({ disabled, onSend }) => {
       onChange={(e) => setMessage(e.target.value)}
       placeholder="What do you want to know about Hassan?"
       className="w-full bg-tertiary h-16 py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
+      required
     />
     <button
       disabled={disabled}

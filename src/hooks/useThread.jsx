@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { createNewThread, fetchThread, runStates } from "./api"
 
-export default function useThread(run, setRun) {
+export default function useThread(run, setRun, setProcessing, setStatus) {
   const [threadId, setThreadId] = useState(null)
   const [thread, setThread] = useState(null)
   const [messages, setMessages] = useState([])
@@ -26,7 +26,6 @@ export default function useThread(run, setRun) {
     if (!run || !runStates.includes(run.status)) {
         return;
     }
-
     fetchThread(run.thread_id)
         .then((threadData) => {
             setThread(threadData);
@@ -35,7 +34,7 @@ export default function useThread(run, setRun) {
 
   useEffect(() => {
     if (!thread) {
-        return;
+      return;
     }
     let newMessages = [...thread.messages]
         .sort((a, b) => a.created_at - b.created_at)
@@ -44,6 +43,8 @@ export default function useThread(run, setRun) {
   }, [thread, setMessages]);
 
   const clearThread = () => {
+    setStatus("Processing...")
+    setProcessing(true)
     localStorage.removeItem("thread_id")
     setThreadId(null)
     setThread(null)
@@ -53,6 +54,6 @@ export default function useThread(run, setRun) {
   return { 
     threadId, 
     messages, 
-    clearThread 
+    clearThread,
   }
 }

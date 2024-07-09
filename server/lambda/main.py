@@ -12,13 +12,13 @@ from mangum import Mangum
 
 app = FastAPI()
 
-# app.add_middleware(
-#   CORSMiddleware,
-#   allow_origins=["*"],
-#   allow_credentials=True,
-#   allow_methods=["*"],
-#   allow_headers=["*"]
-# )
+app.add_middleware(
+  CORSMiddleware,
+  allow_origins=["http://localhost:5173", "https://hassanchowdhry.live", "https://hassanchowdhryportfolio.web.app"],
+  allow_credentials=True,
+  allow_methods=["*"],
+  allow_headers=["*"]
+)
 
 client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 assistant_id = os.getenv("OPENAI_ASSISTANT_ID")
@@ -62,38 +62,21 @@ async def post_new_thread():
     raise HTTPException(status_code=500, detail=f"Error creating thread: {e}")
   
   try:
-    run = await client.beta.threads.runs.create(
+    run = await client.beta.threads.runs.create_and_poll(
       thread_id=thread.id,
-      assistant_id=assistant_id
+      assistant_id=assistant_id,
     )
+
+    return RunStatus(
+      run_id=run.id,
+      thread_id=thread.id,
+      status=run.status,
+      last_error=run.last_error,
+      required_action=run.required_action
+    )
+
   except Exception as e:
     raise HTTPException(status_code=500, detail=f"Error creating run: {e}")
-  
-  return RunStatus(
-    run_id=run.id,
-    thread_id=thread.id,
-    status=run.status,
-    last_error=run.last_error,
-    required_action=run.required_action
-  )
-
-@app.get("/api/threads/{thread_id}/runs/{run_id}")
-async def get_run(thread_id: str, run_id: str):
-  try: 
-    run = await client.beta.threads.runs.retrieve(
-      thread_id=thread_id,
-      run_id=run_id
-    )
-  except Exception as e:
-    raise HTTPException(status_code=500, detail=f"Error retrieving run: {e}")
-  
-  return RunStatus(
-    run_id=run.id,
-    thread_id=thread_id,
-    status=run.status,
-    last_error=run.last_error,
-    required_action=run.required_action
-  )
 
 @app.get("/api/threads/{thread_id}")
 async def get_thread(thread_id: str):
@@ -116,10 +99,11 @@ async def get_thread(thread_id: str):
   except Exception as e:
     raise HTTPException(status_code=500, detail=f"Error retrieving messages: {e}")
 
-
-
 @app.post("/api/threads/{thread_id}")
 async def post_thread_message(thread_id: str, message: CreateMessage):
+  if not thread_id:
+    raise HTTPException(status_code=400, detail=f"Add thread_id: {e}")
+
   try:
     await client.beta.threads.messages.create(
         thread_id=thread_id,
@@ -130,10 +114,11 @@ async def post_thread_message(thread_id: str, message: CreateMessage):
       print(f"An error occurred: {e}")
       raise HTTPException(status_code=500, detail=f"Error creating new thread or run: {e}")
   
-  run = await client.beta.threads.runs.create(
+  run = await client.beta.threads.runs.create_and_poll(
       thread_id=thread_id,
       assistant_id=assistant_id
   )
+  
   return RunStatus(
     run_id=run.id,
     thread_id=thread_id,
