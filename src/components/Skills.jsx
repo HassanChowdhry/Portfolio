@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion';
-import { fadeIn, slideIn } from '../utils/motion'
+import { fadeIn } from '../utils/motion'
 import { styles } from '../style';
+import { Wrapper } from './Wrapper';
 
 const Skills = ({title, skill, index, fade}) => {
   return (
     <div className='overflow-hidden'>
-      <motion.div variants={fadeIn(`${fade}`, "tween", index*0.5, 1)} className={`py-5`}>
+      <Wrapper fade={fade} type="tween" index={index} className="py-5">
         <h1 className={`${styles.heroSubText} my-4`}>{title}</h1>
         <div className="flex flex-row flex-wrap justify-left gap-10">
           {skill.map(({name, icon, color}) => (
@@ -24,7 +25,7 @@ const Skills = ({title, skill, index, fade}) => {
             </div>
           ))}
         </div>
-      </motion.div>
+      </Wrapper>
     </div>
   )
 }

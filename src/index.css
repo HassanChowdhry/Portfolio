@@ -545,12 +545,11 @@
 }
 
 .animated-button:active {
-  scale: 0.95;
   box-shadow: 0 0 0 4px #915eff;
 }
 
 .animated-button:hover .circle {
-  width: 220px;
+  width: 105%;
   height: 220px;
   opacity: 1;
 }

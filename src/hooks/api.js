@@ -1,5 +1,5 @@
 export const runStates = ["requires_action", "cancelled", "failed", "completed", "expired"]
-const API_SERVER = "https://3v5weqzd57.execute-api.ca-central-1.amazonaws.com/prod/"
+const API_SERVER = import.meta.env.VITE_LOCAL_SERVER
 
 export const createNewThread = async () => {
   try {

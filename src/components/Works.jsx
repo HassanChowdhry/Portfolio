@@ -3,11 +3,11 @@ import { motion } from 'framer-motion';
 import { styles } from '../style';
 import { SectionWrapper } from '../hoc';
 import { projects } from '../constants';
-import { fadeIn } from '../utils/motion'
+import { Wrapper } from './Wrapper';
 
 const ProjectCard = ({ index, name, description, tags, image, source_code_link, demo_link }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index*0.4, 0.6)}>
+    <Wrapper index={index} fade="up" type="spring" >
       <Tilt options={{
         max: 45, scale: 1, speed: 450
       }}
@@ -49,14 +49,14 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
           </button>
         </div>
       </Tilt>
-    </motion.div>
+    </Wrapper>
   )
 };
 
 const Works = () => {
   return (
     <>
-     <motion.div>
+      <motion.div>
         <p className={styles.sectionSubText}>
           Personal Work
         </p>
@@ -67,10 +67,9 @@ const Works = () => {
       
       <div>
         <motion.p 
-          variants={fadeIn("", "", 0.1, 1)}
           className='mt-3 text-secondary text=[17px] max-w-3xl leading-[30px]'
         >
-          These are my projects that I have worked on.
+          Projects that I have worked on.
         </motion.p>
       </div>
       <div className='mt-20 flex flex-wrap gap-7'>
