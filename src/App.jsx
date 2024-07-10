@@ -1,13 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { About, Contact, Experience, Hero, Navbar, Tech, Works, StarsCanvas, Loader } from "./components";
-import 'animate.css';
 import Chatbot from "./chatbot/Chatbot";
+import Meeting from "./meeting/Meeting";
+import Widget from "./components/Widget";
+import 'animate.css';
 
 function App() {  
   const [isLoading, setLoading] = useState(true);
   const [fadeClass, setFadeClass] = useState('animate__animated animate__fadeIn');
-
   useEffect(() => {
     if (isLoading) {
       const toRef = setTimeout(() => {
@@ -17,7 +18,9 @@ function App() {
           setFadeClass('animate__animated animate__fadeIn');
         }, 650);
       }, 2000);
-      return () => clearTimeout(toRef);
+      return () => { 
+        clearTimeout(toRef) 
+      };
     }
   }, [isLoading]);
 
@@ -29,7 +32,9 @@ function App() {
             <>    
               <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
                 <Navbar />
-                {isLoading ? <div className={fadeClass}><Loader /></div> : <div className={fadeClass}><Hero /></div>}
+                {isLoading 
+                ? <div className={fadeClass}><Loader /></div> 
+                : <div className={fadeClass}><Hero /></div>}
               </div>
 
               <About />
@@ -45,7 +50,10 @@ function App() {
           } />
 
           <Route path="/ai" element={<Chatbot />} />
+          <Route path="/meeting" element={<Meeting />} />
+
         </Routes>
+        <Widget />
       </div>
     </BrowserRouter>
   )

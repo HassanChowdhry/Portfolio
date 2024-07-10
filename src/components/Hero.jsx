@@ -7,7 +7,6 @@ import QuickLinks from './QuickLinks';
 import lottie from 'lottie-web';
 
 const Hero = () => {
-
   const name = "Hassan".split('');
   const intro = "Hi I'm ".split('')
   const bio = "I am a Computer Science student at Dalhousie University.".split('');
