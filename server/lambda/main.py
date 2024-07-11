@@ -6,19 +6,10 @@ load_dotenv()
 from fastapi import FastAPI, HTTPException
 from openai import AsyncOpenAI
 from openai.types.beta.threads.run import RequiredAction, LastError
-from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from mangum import Mangum
 
 app = FastAPI()
-
-app.add_middleware(
-  CORSMiddleware,
-  allow_origins=["http://localhost:5173", "https://hassanchowdhry.live", "https://hassanchowdhryportfolio.web.app"],
-  allow_credentials=True,
-  allow_methods=["*"],
-  allow_headers=["*"]
-)
 
 client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 assistant_id = os.getenv("OPENAI_ASSISTANT_ID")

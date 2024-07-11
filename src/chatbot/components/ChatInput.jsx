@@ -19,12 +19,12 @@ const ChatInput = ({ disabled, onSend }) => {
       value={message}
       onChange={(e) => setMessage(e.target.value)}
       placeholder="What do you want to know about Hassan?"
-      className="w-full bg-tertiary h-16 py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
+      className="w-full bg-tertiary h-16 py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium placeholder:text-[12px] sm:placeholder:text-[16px] "
       required
     />
     <button
       disabled={disabled}
-      className="hover:scale-105 duration-300 hover:bg-button border border-tertiary bg-tertiary py-3 px-8 w-fit font-bold shadow-lg shadow-primary rounded-xl text-white "
+      className="hover:scale-105 duration-300 hover:bg-button border border-tertiary bg-tertiary py-3 px-5 sm:px-8 w-fit font-bold shadow-lg shadow-primary rounded-xl text-white "
       >
       <IoIosSend size={25} />
     </button>
