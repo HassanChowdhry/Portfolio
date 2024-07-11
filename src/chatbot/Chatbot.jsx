@@ -30,9 +30,7 @@ const Chatbot = () => {
         />
       <div className="flex flex-col-reverse grow overflow-scroll">
           {status && (
-              <ChatStatus
-                  status={status}
-              />
+              <ChatStatus status={status} />
           )}
             {messageList}
       </div>
