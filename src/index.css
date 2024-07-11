@@ -561,8 +561,6 @@
   display: flex;
   justify-content: flex-start;
   padding-right: 170px;
-  margin-left: 15px;
-  margin-bottom: 15px;
 }
 .item-hints .hint {
   position: relative;
