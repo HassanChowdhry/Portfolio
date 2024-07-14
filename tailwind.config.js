@@ -8,6 +8,8 @@ export default {
         primary: "#050816",
         secondary: "#aaa6c3",
         tertiary: "#151030",
+        card: "#1d1836",
+        button: "#915eff",
         "black-100": "#100d25",
         "black-200": "#090325",
         "white-100": "#f3f3f3",

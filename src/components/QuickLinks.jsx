@@ -1,33 +1,23 @@
 import { motion } from 'framer-motion';
 import { fadeIn } from '../utils/motion';
-import { FaArrowDown, FaDownload } from "react-icons/fa";
-import { resume } from '../assets';
+import { SiOpenai } from "react-icons/si";
+import { Link } from 'react-router-dom';
+import { MdSchedule, MdScheduleSend } from "react-icons/md";
 
 const QuickLinks = () => {  
   return (
     <div className='flex gap-5 flex-col md:flex-row'>
-        {/* add buttons to Contact / About / Resume */}
-        <motion.div variants={fadeIn("up", "tween", 1*0.8, 1.8)} >
-          <a href='#about'>
-            <button className="animated-button w-full lg:animated-button">
-              <FaArrowDown className="arr-2" />
-              <span className="text">About Me</span>
+        <motion.div variants={fadeIn("up", "tween", 1*0.5, 1)} >
+          <Link to='/ai'>
+            <button className="animated-button w-full">
+              <SiOpenai className="arr-2" />
+              <span className="text">Talk to Hassan AI</span>
               <span className="circle"></span>
-              <FaArrowDown className="arr-1" />
+              <SiOpenai className="arr-1" />
             </button>
-          </a>
+          </Link>
         </motion.div>
-        <motion.div variants={fadeIn("up", "tween", 2*0.8, 1.8)}>
-        <a href={resume} download="HassanChowdhry_Resume">
-          <button className="animated-button w-full lg:animated-button">
-            <FaDownload className="arr-2" />
-            <span className="text">Resume</span>
-            <span className="circle"></span>
-            <FaDownload className="arr-1" />
-          </button>
-        </a>
-        </motion.div>
-        <motion.div variants={fadeIn("up", "tween", 3*0.8, 1.8)}>
+        <motion.div variants={fadeIn("up", "tween", 2*0.5, 1)}>
           <a href='#contact'>
             <div className="box">
               <button className="button">Contact Me</button>
@@ -42,6 +32,18 @@ const QuickLinks = () => {
               </div>
             </div>
           </a>
+        </motion.div>
+        <motion.div variants={fadeIn("up", "tween", 3*0.5, 1)} >
+          {/* <Link to='/meeting'> */}
+          <a target='blank' href="https://zcal.co/hassanchowdhry/30min">
+            <button className="animated-button w-full">
+              <MdScheduleSend className="arr-2" />
+              <span className="text">Schedule A Meeting</span>
+              <span className="circle"></span>
+              <MdSchedule className="arr-1" />
+            </button>
+          </a>
+          {/* </Link> */}
         </motion.div>
       </div>
   )

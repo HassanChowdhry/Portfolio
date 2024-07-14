@@ -1,23 +1,30 @@
-// import {motion} from 'framer-motion';
+import { useEffect, useRef } from 'react';
 import { styles } from '../style';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../utils/motion';
 import { SectionWrapper } from '../hoc';
 import QuickLinks from './QuickLinks';
-import Lottie from 'react-lottie';
-import pc from './pc.json';
+import lottie from 'lottie-web';
 
 const Hero = () => {
-
   const name = "Hassan".split('');
   const intro = "Hi I'm ".split('')
   const bio = "I am a Computer Science student at Dalhousie University.".split('');
+  const ref = useRef(null);
 
-  const defaultOptions = {
-    loop: true,
-    autoplay: true, 
-    animationData: pc,
-  };
+  useEffect(() => {
+    if (ref.current) {
+      const animation = lottie.loadAnimation({
+        container: ref.current,
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: '/pc.json',
+      });
+      
+      return () => animation.destroy();
+    }
+}, []);
   return (
     <section className='w-full h-screen m-auto flex-1 item-center'>
       <div 
@@ -38,16 +45,14 @@ const Hero = () => {
               </span>
             </h1>
             <p className={`${styles.heroSubText}`}>
-              {bio.map((c, i) => <motion.span variants={fadeIn("right", "tween", i*0.08, 0.1)} className='letters' key={i}>{c}</motion.span>)}
+              {bio.map((c, i) => <motion.span variants={fadeIn("right", "tween", i*0.08, 0.1)} className={`letters`} key={i}>{c}</motion.span>)}
             </p>
           </motion.div>
 
           <QuickLinks />
         </section>
       </div>
-      <div className='flex m-auto md:w-2/4 w-2/3'>
-        <Lottie options={defaultOptions} />
-      </div>
+      <div ref={ref} className='flex m-auto md:w-2/4 w-5/6' />
     </section>
   )
 }

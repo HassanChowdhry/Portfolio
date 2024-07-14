@@ -2,9 +2,6 @@ import { SectionWrapper } from "../hoc"
 import { languages, frameworks, libraries, devops, tools } from "../constants"
 import Skills from "./Skills" 
 
-// import { motion } from 'framer-motion';
-// import { fadeIn } from '../utils/motion'
-
 const Tech = () => {
   return (
     <>
