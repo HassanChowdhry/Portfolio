@@ -1,11 +1,12 @@
-from typing import List, Optional
+from typing import List, Optional, Annotated
 
 import os
 from dotenv import load_dotenv
 load_dotenv()
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Header, Depends
 from openai import AsyncOpenAI
 from openai.types.beta.threads.run import RequiredAction, LastError
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from mangum import Mangum
 
@@ -14,6 +15,15 @@ app = FastAPI()
 client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 assistant_id = os.getenv("OPENAI_ASSISTANT_ID")
 run_states = ["completed", "failed", "cancelled", "expired", "requires_action"]
+
+allowed_origins = ["https://hassanchowdhry.live", "https://hassanchowdhryportfolio.web.app"]
+app.add_middleware(
+  CORSMiddleware,
+  allow_origins=allowed_origins,
+  allow_credentials=True,
+  allow_methods=["*"],
+  allow_headers=["*"]
+)
 
 class RunStatus(BaseModel):
   run_id: str
@@ -35,12 +45,18 @@ class Thread(BaseModel):
 class CreateMessage(BaseModel):
   content: str
 
+
+def verify_origin(origin: Annotated[str, Header()]):
+  if origin not in allowed_origins:
+    raise HTTPException(status_code=500, detail="Something went wrong")
+  return origin
+
 @app.get("/")
-async def root():
+async def root(origin: str = Depends(verify_origin)):
   return {"message": "This is my API"}
 
 @app.post("/api/new")
-async def post_new_thread():
+async def post_new_thread(origin: str = Depends(verify_origin)):
   thread = await client.beta.threads.create()
   try: 
     await client.beta.threads.messages.create(
@@ -70,7 +86,7 @@ async def post_new_thread():
     raise HTTPException(status_code=500, detail=f"Error creating run: {e}")
 
 @app.get("/api/threads/{thread_id}")
-async def get_thread(thread_id: str):
+async def get_thread(thread_id: str, origin: str = Depends(verify_origin)):
   try:
     messages = await client.beta.threads.messages.list(
       thread_id=thread_id
@@ -91,7 +107,7 @@ async def get_thread(thread_id: str):
     raise HTTPException(status_code=500, detail=f"Error retrieving messages: {e}")
 
 @app.post("/api/threads/{thread_id}")
-async def post_thread_message(thread_id: str, message: CreateMessage):
+async def post_thread_message(thread_id: str, message: CreateMessage, origin: str = Depends(verify_origin)):
   if not thread_id:
     raise HTTPException(status_code=400, detail=f"Add thread_id: {e}")
 
