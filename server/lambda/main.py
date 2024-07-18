@@ -55,7 +55,7 @@ def verify_origin(origin: Annotated[str, Header()]):
 async def root(origin: str = Depends(verify_origin)):
   return {"message": "This is my API"}
 
-@app.post("/api/new")
+@app.post("/api/threads")
 async def post_new_thread(origin: str = Depends(verify_origin)):
   thread = await client.beta.threads.create()
   try: 
