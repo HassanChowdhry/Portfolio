@@ -51,7 +51,7 @@ def verify_origin(origin: Annotated[str, Header()]):
     raise HTTPException(status_code=500, detail="Something went wrong")
   return origin
 
-@app.get("/")
+@app.get("/api")
 async def root(origin: str = Depends(verify_origin)):
   return {"message": "This is my API"}
 
