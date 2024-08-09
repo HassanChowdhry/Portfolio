@@ -15,7 +15,7 @@ const Skills = ({title, skill, index, fade}) => {
               <img 
                 alt={name} src={icon}
                 loading="lazy"
-                className="w-8 h-8"
+                className=" h-8"
               />
               <p>
                 {name}

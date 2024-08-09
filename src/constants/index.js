@@ -8,12 +8,11 @@ import {
   nodejs,
   git,
   figma,
-  // mongodb,
+  mongodb,
   docker,
   dalhousie,
   upwork,
   links,
-  hikma,
   portfolio,
   leetbot,
   tweet,
@@ -35,7 +34,6 @@ import {
   numpy,
   matplot,
   scipy,
-  discord,
   aws,
   firebase,
   gitlab,
@@ -49,7 +47,23 @@ import {
   pixis,
   hassantree,
   beatstream,
-  podtext_ai
+  podtext_ai,
+  oldbailey_ai,
+  unity,
+  vitest,
+  scss,
+  pytest,
+  openai,
+  nginx,
+  nextjs,
+  jira,
+  heroku,
+  flask,
+  fastapi,
+  convex,
+  clerk,
+  c_sharp,
+  flappybird,
 } from "../assets";
 
 export const navLinks = [
@@ -103,14 +117,14 @@ const languages = [
     // color: "#123"
   },
   {
+    name: "TypeScript",
+    icon: typescript,
+    color: "blue"
+  },
+  {
     name: "JavaScript",
     icon: javascript,
     color: "yellow"
-  },
-  {
-    name: "C/C++",
-    icon: c,
-    color: "blue"
   },
   {
     name: "Java",
@@ -118,9 +132,14 @@ const languages = [
     color: "red"
   },
   {
-    name: "TypeScript",
-    icon: typescript,
+    name: "C/C++",
+    icon: c,
     color: "blue"
+  },
+  {
+    name: "C#",
+    icon: c_sharp, 
+    color: "violet"
   },
   {
     name: "SQL",
@@ -138,15 +157,29 @@ const languages = [
     color: "red"
   }];
   const frameworks = [
-  // Frameworks
+  {
+    name: "Next.js",
+    icon: nextjs,
+    color: "black"
+  },
   {
     name: "React JS",
     icon: reactjs,
     color: "blue"
   },
   {
+    name: "Flask",
+    icon: flask,
+    color: "green"
+  },
+  {
     name: "Node JS",
     icon: nodejs,
+    color: "green"
+  },
+  {
+    name: "FastAPI",
+    icon: fastapi,
     color: "green"
   },
   {
@@ -169,28 +202,20 @@ const languages = [
     icon: django,
     color: "green"
   },
-  // {
-  //   name: "SCSS/SASS",
-  //   icon: nodejs,
-  // },
   {
-    name: "Cypress",
-    icon: cypress, 
-    color: "green"
+    name: "Unity",
+    icon: unity,
+    color: "black"
   },
-  {
-    name: "JUnit",
-    icon: junit, 
-    color: "red"
-  },
-  {
-    name: "Jest",
-    icon: jest,
-    color: "red"
-  }];
+];
 
   const libraries = [
   //libraries
+  {
+    name: "OpenAI",
+    icon: openai,
+    color: "green"
+  },
   {
     name: "Three JS",
     icon: threejs,
@@ -227,10 +252,11 @@ const languages = [
     color: "blue"
   },
   {
-    name: "Discord API",
-    icon: discord,
-    color: "violet"
-  }];
+    name: "SCSS/SASS",
+    icon: scss,
+    color: "violet",
+  },
+];
 
   const devops = [
   //devops/cloud
@@ -245,10 +271,59 @@ const languages = [
     color: "orange"
   },
   {
+    name: "NGINX",
+    icon: nginx,
+    color: "green"
+  },
+  {
     name: "Firebase",
     icon: firebase,
     color: "orange"
-  }];
+  },
+  {
+    name: "Heroku",
+    icon: heroku,
+    color: "violet"
+  },
+  {
+    name: "Convex",
+    icon: convex,
+    color: "black"
+  },
+  {
+    name: "Clerk",
+    icon: clerk,
+    color: "orange"
+  },
+];
+
+  const testing = [
+    {
+      name: "Cypress",
+      icon: cypress, 
+      color: "green"
+    },
+    {
+      name: "JUnit",
+      icon: junit, 
+      color: "red"
+    },
+    {
+      name: "Jest",
+      icon: jest,
+      color: "red"
+    },
+    {
+      name: "Pytest",
+      icon: pytest,
+      color: "blue"
+    },
+    {
+      name: "Vitest",
+      icon: vitest,
+      color: "violet"
+    },
+  ];
 
   const tools = [
   // Dev Tools
@@ -282,19 +357,25 @@ const languages = [
     icon: postgresql,
     color: "violet"
   },
-  // {
-  //   name: "MongoDB",
-  //   icon: mongodb,
-  // },
+  {
+    name: "MongoDB",
+    icon: mongodb,
+    color: "green"
+  },
   {
     name: "figma",
     icon: figma, 
     color: "pink"
+  },
+  {
+    name: "Jira",
+    icon: jira, 
+    color: "blue"
   }
 ];
 
 const experiences = [
-  //TODO: Update
+
   {
     title: "Software Developer",
     company_name: "BOTR Solutions",
@@ -303,9 +384,9 @@ const experiences = [
     date: "May 2024 - Aug 2024",
     points: [
       "Revamped the company website with new designs, improving user experience and increasing engagement by 50%.",
-      "Achieved a 40% improvement in SEO ranking through strategic enhancements.",
       "Automated CI/CD pipelines reducing deployment time by 60% and ensuring scalable, reliable delivery.",
       "Developed comprehensive end-to-end backend systems for REST APIs, streamlining feature development.",
+      "Created infrastructure using AWS CDK for scalable, reliable deployments and automated alerting for downtime.",
     ],
   },
   {
@@ -315,9 +396,7 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "Sep 2024 - Present",
     points: [
-      "Boosted student performance by 25% by implementing personalized tutoring strategies.",
-      "Elevated code quality to industry standards by providing constructive feedback on 100+ assignments.",
-      "Assisted in weekly labs for 50+ students, enhancing their practical understanding of front-end concepts.",
+      "Incoming",
     ],
   },
   {
@@ -379,6 +458,40 @@ const projects = [
     demo_link: "https://hassanchowdhry.live",
   },
   {
+    name: "OldBailey AI",
+    description:
+      "Developed an AI to assist researchers and historians by providing insights into historical trends, facilitating data analysis, and offering an immersive experience through role-play.",
+    tags: [
+      {
+        name: "Next.js",
+        color: "violet-text-gradient",
+      },
+      {
+        name: "Flask",
+        color: "green-text-gradient",
+      },
+      {
+        name: "TypeScript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "OpenAI",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Python",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "MongoDB",
+        color: "green-text-gradient",
+      },
+    ],
+    image: oldbailey_ai,
+    source_code_link: "https://github.com/HassanChowdhry/OldBailey-AI",
+    demo_link: "https://github.com/HassanChowdhry/OldBailey-AI",
+  },
+  {
     name: "PodText AI",
     description:
       "Spearheaded the development of a full-stack web application enabling users to create and publish podcasts using AI voice and image generation and text-to-speech technology.",
@@ -435,14 +548,32 @@ const projects = [
       },
     ],
     image: pixis,
-    source_code_link: "https://github.com/HassanChowdhry/PhotoGallery-V2",
-    demo_link: "https://github.com/HassanChowdhry/PhotoGallery-V2",
+    source_code_link: "https://github.com/HassanChowdhry/Pixis",
+    demo_link: "https://github.com/HassanChowdhry/Pixis",
+  },
+  {
+    name: "Flappy Bird",
+    description:
+      "Flappy Bird Clone is a simple, addictive game made with C# and Unity. Guide a small bird through obstacles by tapping to keep it airborne, avoiding pipes to score points. With pixel-art graphics and smooth gameplay, this clone captures the fun of the original in a quick, casual format.",
+    tags: [
+      {
+        name: "C#",
+        color: "violet-text-gradient",
+      },
+      {
+        name: "Unity",
+        color: "violet-text-gradient",
+      },
+    ],
+    image: flappybird,
+    source_code_link: "https://github.com/HassanChowdhry/Flappy-Bird",
+    demo_link: "https://github.com/HassanChowdhry/Flappy-Bird",
   },
   //TODO: Update
   {
     name: "BeatStream",
     description:
-      "Designed and developed a photography-centric full stack application with a user and database photo gallery, elevating engagement through the integration of profile photos.",
+      "BeatStream is an interactive music streaming platform that enables users to join chat rooms via access codes and stream Spotify music hosted by a user.",
     tags: [
       {
         name: "React",
@@ -530,36 +661,6 @@ const projects = [
     demo_link: "https://links-cf02b.web.app/home",
   },
   {
-    name: "Hikma AI",
-    description:
-      "Led the development of an Artificial Intelligence (AI) discovery tool, resulting in a 15% increase in community-generated ideas and fostering a culture of innovation within the community.",
-    tags: [
-      {
-        name: "React",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "TypeScript",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "TailwindCSS",
-        color: "green-text-gradient",
-      },
-      {
-        name: "MaterialUI",
-        color: "violet-text-gradient",
-      },
-      {
-        name: "Firebase",
-        color: "orange-text-gradient",
-      },
-    ],
-    image: hikma,
-    source_code_link: "https://github.com/HassanChowdhry/hikma-ai-frontend",
-    demo_link: "https://hikma-ai.web.app/about",
-  },
-  {
     name: "Leetcode Stats Bot",
     description:
       "Engineered a custom Discord bot designed to analyze Leetcode statistics and performance metrics for the competitive programming community.",
@@ -609,4 +710,4 @@ const projects = [
   },
 ];
 
-export { services, languages, frameworks, libraries, devops, tools, experiences, projects };
+export { testing, services, languages, frameworks, libraries, devops, tools, experiences, projects };

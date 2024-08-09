@@ -47,17 +47,32 @@ import hassantree from './projects/hassantree.png';
 import beatstream from './projects/beatstream.png';
 import portfolio from './projects/portfolio.png';
 import leetbot from './projects/leetbot.png';
-import hikma from './projects/hikma.png';
 import links from './projects/links.png';
 import tweet from './projects/tweet.png';
 import resume from './resume/HassanChowdhry_Resume.pdf';
 import podtext_ai from './projects/podtext-ai.png';
+import oldbailey_ai from './projects/oldbailey.png';
+import flappybird from './projects/flappybird.png';
 
 import { FaLinkedin } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 import { FaUpwork } from "react-icons/fa6";
 
+import unity from "./tech/unity.webp";
+import vitest from "./tech/vitest.svg";
+import scss from "./tech/scss.png";
+import pytest from "./tech/pytest.png";
+import openai from "./tech/openai.png";
+import nginx from "./tech/nginx.webp";
+import nextjs from "./tech/nextjs.png";
+import jira from "./tech/jira.png";
+import heroku from "./tech/heroku.webp";
+import flask from "./tech/flask.png";
+import fastapi from "./tech/fastapi.svg";
+import convex from "./tech/convex.png";
+import clerk from "./tech/clerk.png";
+import c_sharp from "./tech/c-sharp.png";
 
 export {
   logo,
@@ -82,7 +97,6 @@ export {
   hassantree,
   beatstream,
   links,
-  hikma,
   portfolio,
   leetbot,
   tweet,
@@ -114,5 +128,21 @@ export {
   FaGithub,
   FaUpwork,
   SiLeetcode,
-  podtext_ai
+  podtext_ai,
+  oldbailey_ai,
+  unity,
+  vitest,
+  scss,
+  pytest,
+  openai,
+  nginx,
+  nextjs,
+  jira,
+  heroku,
+  flask,
+  fastapi,
+  convex,
+  clerk,
+  c_sharp,
+  flappybird,
 };
