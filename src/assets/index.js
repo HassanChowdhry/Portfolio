@@ -41,6 +41,7 @@ import postgresql from "./tech/postgresql.png";
 
 import dalhousie from "./company/dalhousie.png";
 import upwork from "./company/upwork.png";
+import ansys from "./company/ansys.jpg";
 
 import pixis from './projects/pixis.png';
 import hassantree from './projects/hassantree.png';
@@ -145,4 +146,5 @@ export {
   clerk,
   c_sharp,
   flappybird,
+  ansys,
 };

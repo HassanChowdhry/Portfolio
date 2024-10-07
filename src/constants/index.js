@@ -64,6 +64,7 @@ import {
   clerk,
   c_sharp,
   flappybird,
+  ansys,
 } from "../assets";
 
 export const navLinks = [
@@ -377,6 +378,28 @@ const languages = [
 const experiences = [
 
   {
+    title: "Incoming Software Developer Intern",
+    company_name: "Ansys",
+    icon: ansys,
+    iconBg: "#E6DEDD",
+    date: "Jan 2025 - Apr 2025",
+    points: [
+      "Incoming Ansys CFD Software Developer Intern for the Winter 2025 term.",
+    ],
+  },
+  {
+    title: "Teaching Assistant",
+    company_name: "Dalhousie University",
+    icon: dalhousie,
+    iconBg: "#E6DEDD",
+    date: "May 2023 - Present",
+    points: [
+      "Boosted student performance by 25% by implementing personalized tutoring strategies.",
+      "Elevated code quality to industry standards by providing constructive feedback on 100+ assignments.",
+      "Assisted in weekly labs for 50+ students, enhancing their practical understanding of front-end concepts.",
+    ],
+  },
+  {
     title: "Software Developer",
     company_name: "BOTR Solutions",
     icon: dalhousie,
@@ -387,28 +410,6 @@ const experiences = [
       "Automated CI/CD pipelines reducing deployment time by 60% and ensuring scalable, reliable delivery.",
       "Developed comprehensive end-to-end backend systems for REST APIs, streamlining feature development.",
       "Created infrastructure using AWS CDK for scalable, reliable deployments and automated alerting for downtime.",
-    ],
-  },
-  {
-    title: "Together@Dal Computer Science Mentor",
-    company_name: "Dalhousie University",
-    icon: dalhousie,
-    iconBg: "#E6DEDD",
-    date: "Sep 2024 - Present",
-    points: [
-      "Incoming",
-    ],
-  },
-  {
-    title: "Teaching Assistant (TA)",
-    company_name: "Dalhousie University",
-    icon: dalhousie,
-    iconBg: "#E6DEDD",
-    date: "May 2023 - Jan 2024",
-    points: [
-      "Boosted student performance by 25% by implementing personalized tutoring strategies.",
-      "Elevated code quality to industry standards by providing constructive feedback on 100+ assignments.",
-      "Assisted in weekly labs for 50+ students, enhancing their practical understanding of front-end concepts.",
     ],
   },
   {
