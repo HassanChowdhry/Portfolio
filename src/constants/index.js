@@ -1,45 +1,10 @@
 import {
-  javascript,
-  typescript,
-  html,
-  css,
-  reactjs,
-  tailwind,
-  nodejs,
-  git,
-  figma,
-  mongodb,
-  docker,
   dalhousie,
   upwork,
   links,
   portfolio,
   leetbot,
   tweet,
-  threejs,
-  angular,
-  express,
-  sql,
-  java,
-  vite,
-  python,
-  github,
-  c,
-  django,
-  cypress,
-  junit,
-  jest,
-  jquery,
-  pandas,
-  numpy,
-  matplot,
-  scipy,
-  aws,
-  firebase,
-  gitlab,
-  postman,
-  mysql,
-  postgresql,
   FaLinkedin,
   FaGithub,
   FaUpwork,
@@ -49,22 +14,9 @@ import {
   beatstream,
   podtext_ai,
   oldbailey_ai,
-  unity,
-  vitest,
-  scss,
-  pytest,
-  openai,
-  nginx,
-  nextjs,
-  jira,
-  heroku,
-  flask,
-  fastapi,
-  convex,
-  clerk,
-  c_sharp,
   flappybird,
   ansys,
+  icpc,
 } from "../assets";
 
 export const navLinks = [
@@ -90,293 +42,26 @@ const services = [
   {
     title: "LinkedIn",
     Icon: FaLinkedin,
-    link: "https://www.linkedin.com/in/hassanchowdhry/"
+    link: "https://www.linkedin.com/in/hassanchowdhry/",
   },
   {
     title: "Github",
     Icon: FaGithub,
-    link: "https://github.com/HassanChowdhry"
+    link: "https://github.com/HassanChowdhry",
   },
   {
     title: "Leetcode",
     Icon: SiLeetcode,
-    link: "https://leetcode.com/u/HassanChowdhry/"
+    link: "https://leetcode.com/u/HassanChowdhry/",
   },
   {
     title: "Upwork",
     Icon: FaUpwork,
-    link: "https://www.upwork.com/freelancers/~013df04d0a3432d810"
+    link: "https://www.upwork.com/freelancers/~013df04d0a3432d810",
   },
-];
-
-const languages = [
-  //languages
-  {
-    name: "Python",
-    icon: python,
-    color: "blue"
-    // color: "#123"
-  },
-  {
-    name: "TypeScript",
-    icon: typescript,
-    color: "blue"
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
-    color: "yellow"
-  },
-  {
-    name: "Java",
-    icon: java,
-    color: "red"
-  },
-  {
-    name: "C/C++",
-    icon: c,
-    color: "blue"
-  },
-  {
-    name: "C#",
-    icon: c_sharp, 
-    color: "violet"
-  },
-  {
-    name: "SQL",
-    icon: sql,
-    color: "violet"
-  },
-  {
-    name: "CSS3",
-    icon: css,
-    color: "blue"
-  },
-  {
-    name: "HTML5",
-    icon: html,
-    color: "red"
-  }];
-  const frameworks = [
-  {
-    name: "Next.js",
-    icon: nextjs,
-    color: "black"
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-    color: "blue"
-  },
-  {
-    name: "Flask",
-    icon: flask,
-    color: "green"
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-    color: "green"
-  },
-  {
-    name: "FastAPI",
-    icon: fastapi,
-    color: "green"
-  },
-  {
-    name: "Express JS",
-    icon: express,
-    color: "green"
-  },
-  {
-    name: "Angular JS",
-    icon: angular,
-    color: "red"
-  },
-  {
-    name: "Vite",
-    icon: vite,
-    color: "violet"
-  },
-  {
-    name: "Django",
-    icon: django,
-    color: "green"
-  },
-  {
-    name: "Unity",
-    icon: unity,
-    color: "black"
-  },
-];
-
-  const libraries = [
-  //libraries
-  {
-    name: "OpenAI",
-    icon: openai,
-    color: "green"
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
-    color: "black"
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-    color: "blue"
-  },
-  {
-    name: "JQuery",
-    icon: jquery,
-    color: "blue"
-  },
-  {
-    name: "Pandas",
-    icon: pandas,
-    color: "blue"
-  },
-  {
-    name: "NumPy",
-    icon: numpy,
-    color: "blue"
-  },
-  {
-    name: "Matplotlib",
-    icon: matplot,
-    color: "blue"
-  },
-  {
-    name: "SciPy",
-    icon: scipy,
-    color: "blue"
-  },
-  {
-    name: "SCSS/SASS",
-    icon: scss,
-    color: "violet",
-  },
-];
-
-  const devops = [
-  //devops/cloud
-  {
-    name: "Docker",
-    icon: docker,
-    color: "blue"
-  },
-  {
-    name: "AWS",
-    icon: aws,
-    color: "orange"
-  },
-  {
-    name: "NGINX",
-    icon: nginx,
-    color: "green"
-  },
-  {
-    name: "Firebase",
-    icon: firebase,
-    color: "orange"
-  },
-  {
-    name: "Heroku",
-    icon: heroku,
-    color: "violet"
-  },
-  {
-    name: "Convex",
-    icon: convex,
-    color: "black"
-  },
-  {
-    name: "Clerk",
-    icon: clerk,
-    color: "orange"
-  },
-];
-
-  const testing = [
-    {
-      name: "Cypress",
-      icon: cypress, 
-      color: "green"
-    },
-    {
-      name: "JUnit",
-      icon: junit, 
-      color: "red"
-    },
-    {
-      name: "Jest",
-      icon: jest,
-      color: "red"
-    },
-    {
-      name: "Pytest",
-      icon: pytest,
-      color: "blue"
-    },
-    {
-      name: "Vitest",
-      icon: vitest,
-      color: "violet"
-    },
-  ];
-
-  const tools = [
-  // Dev Tools
-  {
-    name: "Git",
-    icon: git, 
-    color: "orange"
-  },
-  {
-    name: "Github",
-    icon: github,
-    color: "black"
-  },
-  {
-    name: "GitLab",
-    icon: gitlab, 
-    color: "orange"
-  },
-  {
-    name: "Postman",
-    icon: postman,
-    color: "orange"
-  },
-  {
-    name: "MySQL",
-    icon: mysql,
-    color: "violet"
-  },
-  {
-    name: "PostgreSQL",
-    icon: postgresql,
-    color: "violet"
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-    color: "green"
-  },
-  {
-    name: "figma",
-    icon: figma, 
-    color: "pink"
-  },
-  {
-    name: "Jira",
-    icon: jira, 
-    color: "blue"
-  }
 ];
 
 const experiences = [
-
   {
     title: "Incoming Software Developer Intern",
     company_name: "Ansys",
@@ -386,6 +71,14 @@ const experiences = [
     points: [
       "Incoming Ansys CFD Software Developer Intern for the Winter 2025 term.",
     ],
+  },
+  {
+    title: "ICPC NENA Contestant",
+    company_name: "ICPC",
+    icon: icpc,
+    iconBg: "#E6DEDD",
+    date: "Nov 2024 - Nov 2024",
+    points: ["Third Place in the Atlantic region."],
   },
   {
     title: "Teaching Assistant",
@@ -423,8 +116,8 @@ const experiences = [
       "Improved test coverage by introducing API and UI end-to-end tests, achieving a 20% reduction in reported issues.",
       "Optimized RESTful and WebSocket services, increasing unit test coverage from 50% to 90%.",
       "Ensured all automated tests were maintainable and scalable over time, contributing to long-term project success.",
-    ]
-  }
+    ],
+  },
 ];
 
 const projects = [
@@ -711,4 +404,4 @@ const projects = [
   },
 ];
 
-export { testing, services, languages, frameworks, libraries, devops, tools, experiences, projects };
+export { services, experiences, projects };
