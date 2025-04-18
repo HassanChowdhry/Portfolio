@@ -7,7 +7,10 @@ import {
   tweet,
   FaLinkedin,
   FaGithub,
+  FaStackOverflow,
+  FaMedium,
   FaUpwork,
+  GiTeacher,
   SiLeetcode,
   pixis,
   hassantree,
@@ -42,23 +45,38 @@ const services = [
   {
     title: "LinkedIn",
     Icon: FaLinkedin,
-    link: "https://www.linkedin.com/in/hassanchowdhry/",
+    link: "https://www.linkedin.com/in/bilal-ishtiaque/",
   },
   {
     title: "Github",
     Icon: FaGithub,
-    link: "https://github.com/HassanChowdhry",
-  },
-  {
-    title: "Leetcode",
-    Icon: SiLeetcode,
-    link: "https://leetcode.com/u/HassanChowdhry/",
+    link: "https://github.com/BilalIshtiaque",
   },
   {
     title: "Upwork",
     Icon: FaUpwork,
-    link: "https://www.upwork.com/freelancers/~013df04d0a3432d810",
+    link: "",
   },
+  {
+    title: "Medium",
+    Icon: FaMedium,
+    link: "",
+  },
+  {
+    title: "ADPList",
+    Icon: GiTeacher,
+    link: "",
+  },
+  {
+    title: "Stackoverflow",
+    Icon: FaStackOverflow,
+    link: "https://stackoverflow.com/users/4986912/bilal-ishtiaque",
+  },
+  {
+    title: "Leetcode",
+    Icon: SiLeetcode,
+    link: "",
+  }
 ];
 
 const experiences = [
@@ -148,8 +166,8 @@ const projects = [
       },
     ],
     image: portfolio,
-    source_code_link: "https://github.com/HassanChowdhry/Portfolio",
-    demo_link: "https://hassanchowdhry.live",
+    source_code_link: "https://github.com/BilalIshtiaque/Portfolio",
+    demo_link: "https://github.com/BilalIshtiaque/Portfolio"
   },
   {
     name: "OldBailey AI",
@@ -182,226 +200,9 @@ const projects = [
       },
     ],
     image: oldbailey_ai,
-    source_code_link: "https://github.com/HassanChowdhry/OldBailey-AI",
-    demo_link: "https://github.com/HassanChowdhry/OldBailey-AI",
-  },
-  {
-    name: "PodText AI",
-    description:
-      "Spearheaded the development of a full-stack web application enabling users to create and publish podcasts using AI voice and image generation and text-to-speech technology.",
-    tags: [
-      {
-        name: "Next.js",
-        color: "violet-text-gradient",
-      },
-      {
-        name: "OpenAI",
-        color: "green-text-gradient",
-      },
-      {
-        name: "TypeScript",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Convex",
-        color: "orange-text-gradient",
-      },
-      {
-        name: "TailwindCSS",
-        color: "blue-text-gradient",
-      },
-    ],
-    image: podtext_ai,
-    source_code_link: "https://github.com/HassanChowdhry/PodText-AI",
-    demo_link: "https://podtext-ai.vercel.app",
-  },
-  {
-    name: "Pixis",
-    description:
-      "Designed and developed a photography-centric full stack application with a user and database photo gallery, elevating engagement through the integration of profile photos.",
-    tags: [
-      {
-        name: "React",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Node.js",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Express.js",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "MySQL",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "AWS",
-        color: "orange-text-gradient",
-      },
-    ],
-    image: pixis,
-    source_code_link: "https://github.com/HassanChowdhry/Pixis",
-    demo_link: "https://github.com/HassanChowdhry/Pixis",
-  },
-  {
-    name: "Flappy Bird",
-    description:
-      "Flappy Bird Clone is a simple, addictive game made with C# and Unity. Guide a small bird through obstacles by tapping to keep it airborne, avoiding pipes to score points. With pixel-art graphics and smooth gameplay, this clone captures the fun of the original in a quick, casual format.",
-    tags: [
-      {
-        name: "C#",
-        color: "violet-text-gradient",
-      },
-      {
-        name: "Unity",
-        color: "violet-text-gradient",
-      },
-    ],
-    image: flappybird,
-    source_code_link: "https://github.com/HassanChowdhry/Flappy-Bird",
-    demo_link: "https://github.com/HassanChowdhry/Flappy-Bird",
-  },
-  //TODO: Update
-  {
-    name: "BeatStream",
-    description:
-      "BeatStream is an interactive music streaming platform that enables users to join chat rooms via access codes and stream Spotify music hosted by a user.",
-    tags: [
-      {
-        name: "React",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Django",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Node.js",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Python",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Spotfiy API",
-        color: "green-text-gradient",
-      },
-    ],
-    image: beatstream,
-    source_code_link: "https://github.com/HassanChowdhry/BeatStream",
-    demo_link: "https://github.com/HassanChowdhry/BeatStream",
-  },
-  {
-    name: "HassanTree",
-    description:
-      "Designed and developed a photography-centric full stack application with a user and database photo gallery, elevating engagement through the integration of profile photos.",
-    tags: [
-      {
-        name: "Next.js",
-        color: "green-text-gradient",
-      },
-      {
-        name: "TypeScript",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "SASS/SCSS",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "TailwindCSS",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Vercel",
-        color: "violet-text-gradient",
-      },
-    ],
-    image: hassantree,
-    source_code_link: "https://github.com/HassanChowdhry/HassanTree",
-    demo_link: "https://hassantree.vercel.app/",
-  },
-  {
-    name: "Google Links",
-    description:
-      "Developed an open-source web app optimizing research productivity by scraping and organizing Google search data into custom Excel sheets, boosting data collection efficiency by 30%.",
-    tags: [
-      {
-        name: "React",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Javascript",
-        color: "yellow-text-gradient",
-      },
-      {
-        name: "Excel",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Firebase",
-        color: "orange-text-gradient",
-      },
-      {
-        name: "Figma",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: links,
-    source_code_link: "https://github.com/HassanChowdhry/GoogleLinks",
-    demo_link: "https://links-cf02b.web.app/home",
-  },
-  {
-    name: "Leetcode Stats Bot",
-    description:
-      "Engineered a custom Discord bot designed to analyze Leetcode statistics and performance metrics for the competitive programming community.",
-    tags: [
-      {
-        name: "Python",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Discord API",
-        color: "violet-text-gradient",
-      },
-      {
-        name: "Pandas",
-        color: "blue-text-gradient",
-      },
-    ],
-    image: leetbot,
-    source_code_link: "https://github.com/HassanChowdhry/Leetcode-Stats-Bot",
-    demo_link: "https://github.com/HassanChowdhry/Leetcode-Stats-Bot",
-  },
-  {
-    name: "Tweet Generator",
-    description:
-      "Launched an open-source web application to make customized tweets. The user fills out input forms, which updates and renders the tweet display asynchronously.",
-    tags: [
-      {
-        name: "JavaScript",
-        color: "yellow-text-gradient",
-      },
-      {
-        name: "HTML5",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "CSS3",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Bootstrap",
-        color: "violet-text-gradient",
-      },
-    ],
-    image: tweet,
-    source_code_link: "https://github.com/HassanChowdhry/Tweet-Generator",
-    demo_link: "https://hassanchowdhry.github.io/Tweet-Generator/",
-  },
+    source_code_link: "https://github.com/BilalIshtiaque/OldBailey-AI",
+    demo_link: "https://github.com/BilalIshtiaque/OldBailey-AI",
+  }
 ];
 
 export { services, experiences, projects };

@@ -26,9 +26,9 @@ const Contact = () => {
     emailjs.send(
       "service_nlx4pem", "template_vcasj6p", {
         from_name: form.name,
-        to_name: "Hassan",
+        to_name: "Bilal",
         from_email: form.email,
-        to_email: "hassanchowdhry0@gmail.com",
+        to_email: "bilal.ishtiaque.7@gmail.com",
         message: form.message
       },
       "QEGNozwDtSR_OwsPB"

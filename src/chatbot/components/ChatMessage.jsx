@@ -12,7 +12,7 @@ export default function ChatMessage({ message, role }) {
             {isUser ? (<FaRegUser />) : (<img src="/logo.svg" alt="" />)}
           </div>
             <p className="font-bold my-auto text-[20px] text-secondary">
-              {isUser ? ("You") : ("Hassan AI")}
+              {isUser ? ("You") : ("Bilal AI")}
             </p>
           </section>
           <div className="ml-8 flex-col bg-card rounded-3xl py-3 px-5">

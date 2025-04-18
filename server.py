@@ -52,7 +52,7 @@ async def post_new_thread():
   try: 
     await client.beta.threads.messages.create(
       thread_id=thread.id,
-      content="Hello, I'm Hassan AI. How can I help you?",
+      content="Hello, I'm Bilal AI. How can I help you?",
       role="user",
       metadata={"type": "hidden"}
     )

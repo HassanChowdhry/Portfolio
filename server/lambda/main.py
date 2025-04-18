@@ -16,6 +16,7 @@ client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 assistant_id = os.getenv("OPENAI_ASSISTANT_ID")
 run_states = ["completed", "failed", "cancelled", "expired", "requires_action"]
 
+# TODO: Implement me!
 allowed_origins = ["https://hassanchowdhry.live", "https://hassanchowdhryportfolio.web.app"]
 app.add_middleware(
   CORSMiddleware,
@@ -61,7 +62,7 @@ async def post_new_thread(origin: str = Depends(verify_origin)):
   try: 
     await client.beta.threads.messages.create(
       thread_id=thread.id,
-      content="Hello, I'm Hassan AI. How can I help you?",
+      content="Hello, I'm Bilal AI. How can I help you?",
       role="user",
       metadata={"type": "hidden"}
     )

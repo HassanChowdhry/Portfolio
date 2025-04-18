@@ -30,7 +30,7 @@ const Meeting = () => {
       <div className="zcal-inline-widget mx-auto w-[900px] bg-red">
         <a 
           href="https://zcal.co/i/1ZUZulLx">
-            Meeting with Hassan - Schedule a meeting
+            Meeting with Bilal - Schedule a meeting
         </a>
       </div>
       </div>

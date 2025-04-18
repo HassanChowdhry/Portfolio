@@ -18,7 +18,7 @@ const ChatInput = ({ disabled, onSend }) => {
       name="message" 
       value={message}
       onChange={(e) => setMessage(e.target.value)}
-      placeholder="What do you want to know about Hassan?"
+      placeholder="What do you want to know about Bilal?"
       className="w-full bg-tertiary h-16 py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium placeholder:text-[12px] sm:placeholder:text-[16px] "
       required
     />

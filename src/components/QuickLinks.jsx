@@ -11,7 +11,7 @@ const QuickLinks = () => {
           <Link to='/ai'>
             <button className="animated-button w-full">
               <SiOpenai className="arr-2" />
-              <span className="text">Talk to Hassan AI</span>
+              <span className="text">Talk to Bilal AI</span>
               <span className="circle"></span>
               <SiOpenai className="arr-1" />
             </button>
@@ -35,7 +35,7 @@ const QuickLinks = () => {
         </motion.div>
         <motion.div variants={fadeIn("up", "tween", 3*0.5, 1)} >
           {/* <Link to='/meeting'> */}
-          <a target='blank' href="https://zcal.co/hassanchowdhry/30min">
+          <a target='blank' href="https://calendly.com/bilal-ishtiaque-7/30min">
             <button className="animated-button w-full">
               <MdScheduleSend className="arr-2" />
               <span className="text">Schedule A Meeting</span>

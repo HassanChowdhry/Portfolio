@@ -25,7 +25,7 @@ const Widget = () => {
           </span>
 
           <div className="hint-content do--split-children">
-            <p>Talk to Hassan AI</p>
+            <p>Talk to Bilal AI</p>
           </div>
         </div>
       </div>
