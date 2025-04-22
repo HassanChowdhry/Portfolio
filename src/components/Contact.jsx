@@ -43,6 +43,7 @@ const Contact = () => {
     }, (error) => {
       setLoading(false)
       alert("Something went wrong.")
+      console.log(error);
     });
   }
   return (

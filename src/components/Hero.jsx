@@ -9,7 +9,7 @@ import lottie from 'lottie-web';
 const Hero = () => {
   const name = "Bilal".split('');
   const intro = "Hi I'm ".split('')
-  const bio = "Experienced software engineer and mountaineering enthusiast.".split('');
+  const bio = "Experienced software engineer, mountaineering enthusiast and aspiring writer.".split('');
   const ref = useRef(null);
 
   useEffect(() => {

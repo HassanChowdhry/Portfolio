@@ -15,7 +15,7 @@ import portfolio from "./projects/portfolio.png";
 import leetbot from "./projects/leetbot.png";
 import links from "./projects/links.png";
 import tweet from "./projects/tweet.png";
-import resume from "./resume/HassanChowdhry_Resume.pdf"; // TODO: Implement me!
+import resume from "./resume/bilal_resume.pdf";
 import podtext_ai from "./projects/podtext-ai.png";
 import oldbailey_ai from "./projects/oldbailey.png";
 import flappybird from "./projects/flappybird.png";

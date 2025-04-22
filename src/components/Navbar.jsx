@@ -37,8 +37,7 @@ const [toggle, setToggle] = useState(false);
               hover:text-white text-[18px] font-medium cursor-pointer`}
             onClick={() => setActive("resume")}
           >
-            {/* TODO: Implement me! */}
-            <a href={resume} download="Hassan_Resume">Resume</a> 
+            <a href={resume} download="Bilal_Resume">Resume</a> 
           </li>
         </ul>
   
@@ -73,8 +72,7 @@ const [toggle, setToggle] = useState(false);
                   setActive("resume");
                 }}
               >
-                {/* TODO: Implement me! */}
-                <a href={resume} download="Hassan_Resume">Resume</a>
+                <a href={resume} download="Bilal_Resume">Resume</a>
               </li>              
             </ul>
           </div>
