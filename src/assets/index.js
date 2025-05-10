@@ -6,6 +6,7 @@ import close from "./close.svg";
 import dalhousie from "./company/dalhousie.png";
 import upwork from "./company/upwork.png";
 import ansys from "./company/ansys.jpg";
+import botr from "./company/BOTR.jpg";
 import icpc from "./company/icpc.png";
 
 import pixis from "./projects/pixis.png";
@@ -49,4 +50,5 @@ export {
   flappybird,
   ansys,
   icpc,
+  botr,
 };

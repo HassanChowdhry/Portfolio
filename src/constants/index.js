@@ -10,13 +10,11 @@ import {
   FaUpwork,
   SiLeetcode,
   pixis,
-  hassantree,
-  beatstream,
   podtext_ai,
   oldbailey_ai,
-  flappybird,
   ansys,
   icpc,
+  botr,
 } from "../assets";
 
 export const navLinks = [
@@ -63,13 +61,37 @@ const services = [
 
 const experiences = [
   {
-    title: "Incoming Software Developer Intern",
+    title: "Cybersecurity Research Assistant",
+    company_name: "Dalhousie University (MYTech Lab)",
+    icon: dalhousie,
+    iconBg: "#E6DEDD",
+    date: "May 2025 - Present",
+    points: [
+      "Automated Cyber Defence (ACD) with Deep Reinforcement Learning (DRL).",
+      "NSERC/FCS USRA"
+    ],
+  },
+  {
+    title: "Software Engineer Intern",
     company_name: "Ansys",
     icon: ansys,
     iconBg: "#E6DEDD",
-    date: "Jan 2025 - Apr 2025",
+    date: "Jan 2025 - May 2025",
     points: [
-      "Incoming Ansys CFD Software Developer Intern for the Winter 2025 term.",
+      "Spearheaded the creation of a 50+ Cypress end-to-end test suite for Ansys Fluids WebUI, directly addressing 10+ critical UI bugs and accelerating the testing cycle by 15%.",
+      "Enhanced Computational Fluid Dynamics (CFD) simulation tools by improving front-end and back-end systems, increasing user efficiency by 25% and reducing simulation setup time by 15%.",
+      "Improved user experience and interface performance by optimizing graphics rendering and state management using Redux, resulting in a 30% reduction in UI latency and smoother interactions.",
+    ],
+  },
+  {
+    title: "Head Teaching Assistant",
+    company_name: "Dalhousie University",
+    icon: dalhousie,
+    iconBg: "#E6DEDD",
+    date: "May 2023 - May 2025",
+    points: [
+      "Boosted practical knowledge of 150+ students in frontend and backend development by leading weekly labs, ensuring hands-on learning and application of DS&A, Frontend, Backend and Fullstack development concepts.",
+      "Optimized student support and accessibility by designing and implementing an On-Call TA model, which increased flexibility for TAs and ensured timely assistance for students, boosting student participation by 20%.",
     ],
   },
   {
@@ -81,21 +103,9 @@ const experiences = [
     points: ["Third Place in the Atlantic region."],
   },
   {
-    title: "Teaching Assistant",
-    company_name: "Dalhousie University",
-    icon: dalhousie,
-    iconBg: "#E6DEDD",
-    date: "May 2023 - Present",
-    points: [
-      "Boosted student performance by 25% by implementing personalized tutoring strategies.",
-      "Elevated code quality to industry standards by providing constructive feedback on 100+ assignments.",
-      "Assisted in weekly labs for 50+ students, enhancing their practical understanding of front-end concepts.",
-    ],
-  },
-  {
     title: "Software Developer",
     company_name: "BOTR Solutions",
-    icon: dalhousie,
+    icon: botr,
     iconBg: "#E6DEDD",
     date: "May 2024 - Aug 2024",
     points: [
@@ -244,85 +254,6 @@ const projects = [
     image: pixis,
     source_code_link: "https://github.com/HassanChowdhry/Pixis",
     demo_link: "https://github.com/HassanChowdhry/Pixis",
-  },
-  {
-    name: "Flappy Bird",
-    description:
-      "Flappy Bird Clone is a simple, addictive game made with C# and Unity. Guide a small bird through obstacles by tapping to keep it airborne, avoiding pipes to score points. With pixel-art graphics and smooth gameplay, this clone captures the fun of the original in a quick, casual format.",
-    tags: [
-      {
-        name: "C#",
-        color: "violet-text-gradient",
-      },
-      {
-        name: "Unity",
-        color: "violet-text-gradient",
-      },
-    ],
-    image: flappybird,
-    source_code_link: "https://github.com/HassanChowdhry/Flappy-Bird",
-    demo_link: "https://github.com/HassanChowdhry/Flappy-Bird",
-  },
-  //TODO: Update
-  {
-    name: "BeatStream",
-    description:
-      "BeatStream is an interactive music streaming platform that enables users to join chat rooms via access codes and stream Spotify music hosted by a user.",
-    tags: [
-      {
-        name: "React",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Django",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Node.js",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Python",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Spotfiy API",
-        color: "green-text-gradient",
-      },
-    ],
-    image: beatstream,
-    source_code_link: "https://github.com/HassanChowdhry/BeatStream",
-    demo_link: "https://github.com/HassanChowdhry/BeatStream",
-  },
-  {
-    name: "HassanTree",
-    description:
-      "Designed and developed a photography-centric full stack application with a user and database photo gallery, elevating engagement through the integration of profile photos.",
-    tags: [
-      {
-        name: "Next.js",
-        color: "green-text-gradient",
-      },
-      {
-        name: "TypeScript",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "SASS/SCSS",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "TailwindCSS",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Vercel",
-        color: "violet-text-gradient",
-      },
-    ],
-    image: hassantree,
-    source_code_link: "https://github.com/HassanChowdhry/HassanTree",
-    demo_link: "https://hassantree.vercel.app/",
   },
   {
     name: "Google Links",
