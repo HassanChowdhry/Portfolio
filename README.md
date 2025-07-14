@@ -77,7 +77,7 @@ Feel free to reach out to me for any professional inquiries or questions:
 
 - **Email:** [hassan.chowdhry@dal.ca](mailto:hassan.chowdhry@dal.ca)
 - **LinkedIn:** [linkedin/in/hassanchowdhry](https://www.linkedin.com/in/hassanchowdhry)
-- **Website:** [HassanChowdhry.live](http://hassanchowdhry.live)
+- **Website:** [HassanChowdhry.com](http://hassanchowdhry.com)
 
 ---
 
