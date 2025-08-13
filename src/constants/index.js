@@ -1,10 +1,11 @@
 import {
   dalhousie,
   upwork,
-  links,
+  // links,
   portfolio,
-  leetbot,
-  tweet,
+  neurocode_ai,
+  // leetbot,
+  // tweet,
   FaLinkedin,
   FaGithub,
   FaUpwork,
@@ -61,19 +62,21 @@ const services = [
 
 const experiences = [
   {
-    title: "Cybersecurity Research Assistant",
-    company_name: "Dalhousie University (MYTech Lab)",
+    title: "Undergraduate Researcher",
+    company_name: "Dalhousie University (MYTech Lab) / NSERC",
     icon: dalhousie,
     iconBg: "#E6DEDD",
     date: "May 2025 - Present",
     points: [
       "Automated Cyber Defence (ACD) with Deep Reinforcement Learning (DRL).",
-      "NSERC/FCS USRA"
+      "Engineered agentic AI-based Autonomous Cyber Defence (ACD) agents using Pytorch, achieving an increase in general threat detection accuracy within Cyber Operations Research Gym (CybORG) simulations",
+      "Deployed a LangGraph-orchestrated LLM defence agent, cutting simulation false positives while providing transparent, natural-language rationales for every mitigation step.",
+      "Developed curiosity-driven PPO and ICM blue-team agents, boosting CybORG general threat-detection accuracy and establishing a baseline for ongoing research."
     ],
   },
   {
-    title: "Software Engineer Intern",
-    company_name: "Ansys",
+    title: "Software Developer Intern",
+    company_name: "Ansys (Synopsys)",
     icon: ansys,
     iconBg: "#E6DEDD",
     date: "Jan 2025 - May 2025",
@@ -84,18 +87,7 @@ const experiences = [
     ],
   },
   {
-    title: "Head Teaching Assistant",
-    company_name: "Dalhousie University",
-    icon: dalhousie,
-    iconBg: "#E6DEDD",
-    date: "May 2023 - May 2025",
-    points: [
-      "Boosted practical knowledge of 150+ students in frontend and backend development by leading weekly labs, ensuring hands-on learning and application of DS&A, Frontend, Backend and Fullstack development concepts.",
-      "Optimized student support and accessibility by designing and implementing an On-Call TA model, which increased flexibility for TAs and ensured timely assistance for students, boosting student participation by 20%.",
-    ],
-  },
-  {
-    title: "ICPC NENA Contestant",
+    title: "ICPC Contestant",
     company_name: "ICPC",
     icon: icpc,
     iconBg: "#E6DEDD",
@@ -103,7 +95,7 @@ const experiences = [
     points: ["Third Place in the Atlantic region."],
   },
   {
-    title: "Software Developer",
+    title: "Software Developer Intern",
     company_name: "BOTR Solutions",
     icon: botr,
     iconBg: "#E6DEDD",
@@ -113,6 +105,17 @@ const experiences = [
       "Automated CI/CD pipelines reducing deployment time by 60% and ensuring scalable, reliable delivery.",
       "Developed comprehensive end-to-end backend systems for REST APIs, streamlining feature development.",
       "Created infrastructure using AWS CDK for scalable, reliable deployments and automated alerting for downtime.",
+    ],
+  },
+  {
+    title: "Head Teaching Assistant",
+    company_name: "Dalhousie University",
+    icon: dalhousie,
+    iconBg: "#E6DEDD",
+    date: "May 2023 - Present",
+    points: [
+      "Led and mentored 10 TAs, holding weekly coordination meetings and providing guidance on technical and instructional challenges to ensure smooth lab delivery for over 150 students.",
+      "Boosted practical knowledge of 150+ students in frontend and backend development by leading weekly labs, ensuring hands-on learning and application of DS&A, Frontend, Backend and Fullstack development concepts.",
     ],
   },
   {
@@ -131,6 +134,36 @@ const experiences = [
 ];
 
 const projects = [
+  {
+    name: "NeuroCode AI",
+    description:
+      "Led the development of an advanced learning platform for DS&A.",
+    tags: [
+      {
+        name: "Next",
+        color: "violet-text-gradient",
+      },
+      {
+        name: "Go",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "AWS",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "TypeScript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Artificial Intelligence",
+        color: "green-text-gradient",
+      },
+    ],
+    image: neurocode_ai,
+    source_code_link: "https://github.com/HassanChowdhry/",
+    demo_link: "https://hassanchowdhry.com",
+  },
   {
     name: "Portfolio",
     description:
@@ -159,7 +192,7 @@ const projects = [
     ],
     image: portfolio,
     source_code_link: "https://github.com/HassanChowdhry/Portfolio",
-    demo_link: "https://hassanchowdhry.live",
+    demo_link: "https://hassanchowdhry.com",
   },
   {
     name: "OldBailey AI",
@@ -255,84 +288,84 @@ const projects = [
     source_code_link: "https://github.com/HassanChowdhry/Pixis",
     demo_link: "https://github.com/HassanChowdhry/Pixis",
   },
-  {
-    name: "Google Links",
-    description:
-      "Developed an open-source web app optimizing research productivity by scraping and organizing Google search data into custom Excel sheets, boosting data collection efficiency by 30%.",
-    tags: [
-      {
-        name: "React",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Javascript",
-        color: "yellow-text-gradient",
-      },
-      {
-        name: "Excel",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Firebase",
-        color: "orange-text-gradient",
-      },
-      {
-        name: "Figma",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: links,
-    source_code_link: "https://github.com/HassanChowdhry/GoogleLinks",
-    demo_link: "https://links-cf02b.web.app/home",
-  },
-  {
-    name: "Leetcode Stats Bot",
-    description:
-      "Engineered a custom Discord bot designed to analyze Leetcode statistics and performance metrics for the competitive programming community.",
-    tags: [
-      {
-        name: "Python",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Discord API",
-        color: "violet-text-gradient",
-      },
-      {
-        name: "Pandas",
-        color: "blue-text-gradient",
-      },
-    ],
-    image: leetbot,
-    source_code_link: "https://github.com/HassanChowdhry/Leetcode-Stats-Bot",
-    demo_link: "https://github.com/HassanChowdhry/Leetcode-Stats-Bot",
-  },
-  {
-    name: "Tweet Generator",
-    description:
-      "Launched an open-source web application to make customized tweets. The user fills out input forms, which updates and renders the tweet display asynchronously.",
-    tags: [
-      {
-        name: "JavaScript",
-        color: "yellow-text-gradient",
-      },
-      {
-        name: "HTML5",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "CSS3",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Bootstrap",
-        color: "violet-text-gradient",
-      },
-    ],
-    image: tweet,
-    source_code_link: "https://github.com/HassanChowdhry/Tweet-Generator",
-    demo_link: "https://hassanchowdhry.github.io/Tweet-Generator/",
-  },
+  // {
+  //   name: "Google Links",
+  //   description:
+  //     "Developed an open-source web app optimizing research productivity by scraping and organizing Google search data into custom Excel sheets, boosting data collection efficiency by 30%.",
+  //   tags: [
+  //     {
+  //       name: "React",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "Javascript",
+  //       color: "yellow-text-gradient",
+  //     },
+  //     {
+  //       name: "Excel",
+  //       color: "green-text-gradient",
+  //     },
+  //     {
+  //       name: "Firebase",
+  //       color: "orange-text-gradient",
+  //     },
+  //     {
+  //       name: "Figma",
+  //       color: "pink-text-gradient",
+  //     },
+  //   ],
+  //   image: links,
+  //   source_code_link: "https://github.com/HassanChowdhry/GoogleLinks",
+  //   demo_link: "https://links-cf02b.web.app/home",
+  // },
+  // {
+  //   name: "Leetcode Stats Bot",
+  //   description:
+  //     "Engineered a custom Discord bot designed to analyze Leetcode statistics and performance metrics for the competitive programming community.",
+  //   tags: [
+  //     {
+  //       name: "Python",
+  //       color: "green-text-gradient",
+  //     },
+  //     {
+  //       name: "Discord API",
+  //       color: "violet-text-gradient",
+  //     },
+  //     {
+  //       name: "Pandas",
+  //       color: "blue-text-gradient",
+  //     },
+  //   ],
+  //   image: leetbot,
+  //   source_code_link: "https://github.com/HassanChowdhry/Leetcode-Stats-Bot",
+  //   demo_link: "https://github.com/HassanChowdhry/Leetcode-Stats-Bot",
+  // },
+  // {
+  //   name: "Tweet Generator",
+  //   description:
+  //     "Launched an open-source web application to make customized tweets. The user fills out input forms, which updates and renders the tweet display asynchronously.",
+  //   tags: [
+  //     {
+  //       name: "JavaScript",
+  //       color: "yellow-text-gradient",
+  //     },
+  //     {
+  //       name: "HTML5",
+  //       color: "pink-text-gradient",
+  //     },
+  //     {
+  //       name: "CSS3",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "Bootstrap",
+  //       color: "violet-text-gradient",
+  //     },
+  //   ],
+  //   image: tweet,
+  //   source_code_link: "https://github.com/HassanChowdhry/Tweet-Generator",
+  //   demo_link: "https://hassanchowdhry.github.io/Tweet-Generator/",
+  // },
 ];
 
 export { services, experiences, projects };

@@ -19,6 +19,7 @@ import tweet from "./projects/tweet.png";
 import resume from "./resume/HassanChowdhry_Resume.pdf";
 import podtext_ai from "./projects/podtext-ai.png";
 import oldbailey_ai from "./projects/oldbailey.png";
+import neurocode_ai from "./projects/neurocode.png";
 import flappybird from "./projects/flappybird.png";
 
 import { FaLinkedin } from "react-icons/fa";
@@ -51,4 +52,5 @@ export {
   ansys,
   icpc,
   botr,
+  neurocode_ai,
 };
