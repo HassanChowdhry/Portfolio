@@ -16,6 +16,8 @@ import {
   ansys,
   icpc,
   botr,
+  openllm,
+  deeprl
 } from "../assets";
 
 export const navLinks = [
@@ -165,36 +167,6 @@ const projects = [
     demo_link: "https://hassanchowdhry.com",
   },
   {
-    name: "Portfolio",
-    description:
-      "Engineered an interactive website showcasing technical skills, successful projects, and professional experience, leading to heightened user engagement, increased inquiries, and networking opportunities.",
-    tags: [
-      {
-        name: "React",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Vite",
-        color: "violet-text-gradient",
-      },
-      {
-        name: "Three.js",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "TailwindCSS",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Firebase",
-        color: "orange-text-gradient",
-      },
-    ],
-    image: portfolio,
-    source_code_link: "https://github.com/HassanChowdhry/Portfolio",
-    demo_link: "https://hassanchowdhry.com",
-  },
-  {
     name: "OldBailey AI",
     description:
       "Developed an AI to assist researchers and historians by providing insights into historical trends, facilitating data analysis, and offering an immersive experience through role-play.",
@@ -227,6 +199,50 @@ const projects = [
     image: oldbailey_ai,
     source_code_link: "https://github.com/HassanChowdhry/OldBailey-AI",
     demo_link: "https://github.com/HassanChowdhry/OldBailey-AI",
+  },
+  {
+    name: "Open LLM",
+    description:
+      "Open-source, self-hosted LLM chat application, featuring local-first data storage and real-time streaming responses. ",
+    tags: [
+      {
+        name: "React.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Ollama",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "TypeScript",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: openllm,
+    source_code_link: "https://github.com/GHuyHuynh/openllm-web",
+    demo_link: "https://web.cs.dal.ca/~huyh/openllm/",
+  },
+  {
+    name: "Awesome Reinforcement Learningfor Cyber Security",
+    description:
+      "A curated list of resources dedicated to reinforcement learning applied to cyber security. ",
+    tags: [
+      {
+        name: "Deep Reinforcement Learning",
+        color: "violet-text-gradient",
+      },
+      {
+        name: "Deep Learning",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Cybersecurity",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: deeprl,
+    source_code_link: "https://github.com/Limmen/awesome-rl-for-cybersecurity",
+    demo_link: "https://github.com/Limmen/awesome-rl-for-cybersecurity",
   },
   {
     name: "PodText AI",
@@ -287,6 +303,36 @@ const projects = [
     image: pixis,
     source_code_link: "https://github.com/HassanChowdhry/Pixis",
     demo_link: "https://github.com/HassanChowdhry/Pixis",
+  },
+  {
+    name: "Portfolio",
+    description:
+      "Engineered an interactive website showcasing technical skills, successful projects, and professional experience, leading to heightened user engagement, increased inquiries, and networking opportunities.",
+    tags: [
+      {
+        name: "React",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Vite",
+        color: "violet-text-gradient",
+      },
+      {
+        name: "Three.js",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "TailwindCSS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Firebase",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: portfolio,
+    source_code_link: "https://github.com/HassanChowdhry/Portfolio",
+    demo_link: "https://hassanchowdhry.com",
   },
   // {
   //   name: "Google Links",

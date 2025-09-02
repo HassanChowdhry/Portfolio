@@ -21,6 +21,8 @@ import podtext_ai from "./projects/podtext-ai.png";
 import oldbailey_ai from "./projects/oldbailey.png";
 import neurocode_ai from "./projects/neurocode.png";
 import flappybird from "./projects/flappybird.png";
+import openllm from "./projects/openllm.png";
+import deeprl from "./projects/deeprl.png";
 
 import { FaLinkedin } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
@@ -53,4 +55,6 @@ export {
   icpc,
   botr,
   neurocode_ai,
+  openllm,
+  deeprl
 };
