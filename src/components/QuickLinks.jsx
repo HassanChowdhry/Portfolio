@@ -1,23 +1,22 @@
 import { motion } from 'framer-motion';
 import { fadeIn } from '../utils/motion';
-import { SiOpenai } from "react-icons/si";
-import { Link } from 'react-router-dom';
+import { IoIosContact, IoIosContacts } from "react-icons/io";
 import { MdSchedule, MdScheduleSend } from "react-icons/md";
 
 const QuickLinks = () => {  
   return (
     <div className='flex gap-5 flex-col md:flex-row'>
         <motion.div variants={fadeIn("up", "tween", 1*0.5, 1)} >
-          <Link to='/ai'>
+          <a href='#contact'>
             <button className="animated-button w-full">
-              <SiOpenai className="arr-2" />
-              <span className="text">Talk to Hassan AI</span>
+              <IoIosContacts className="arr-2" />
+              <span className="text">Contact Me</span>
               <span className="circle"></span>
-              <SiOpenai className="arr-1" />
+              <IoIosContact className="arr-1" />
             </button>
-          </Link>
+          </a>
         </motion.div>
-        <motion.div variants={fadeIn("up", "tween", 2*0.5, 1)}>
+        {/* <motion.div variants={fadeIn("up", "tween", 2*0.5, 1)}>
           <a href='#contact'>
             <div className="box">
               <button className="button">Contact Me</button>
@@ -32,8 +31,8 @@ const QuickLinks = () => {
               </div>
             </div>
           </a>
-        </motion.div>
-        <motion.div variants={fadeIn("up", "tween", 3*0.5, 1)} >
+        </motion.div> */}
+        <motion.div variants={fadeIn("up", "tween", 2*0.5, 1)} >
           {/* <Link to='/meeting'> */}
           <a target='blank' href="https://zcal.co/hassanchowdhry/30min">
             <button className="animated-button w-full">

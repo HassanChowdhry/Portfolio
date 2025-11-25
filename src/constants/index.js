@@ -1,16 +1,17 @@
 import {
+  activision,
   dalhousie,
   upwork,
   // links,
-  portfolio,
+  // portfolio,
   neurocode_ai,
   // leetbot,
   // tweet,
   FaLinkedin,
   FaGithub,
-  FaUpwork,
+  FaGoogleScholar,
   SiLeetcode,
-  pixis,
+  // pixis,
   podtext_ai,
   oldbailey_ai,
   ansys,
@@ -56,13 +57,23 @@ const services = [
     link: "https://leetcode.com/u/HassanChowdhry/",
   },
   {
-    title: "Upwork",
-    Icon: FaUpwork,
-    link: "https://www.upwork.com/freelancers/~013df04d0a3432d810",
+    title: "Google Scholar",
+    Icon: FaGoogleScholar,
+    link: "https://scholar.google.ca/citations?user=rW6MVrYAAAAJ&hl=en",
   },
 ];
 
 const experiences = [
+  {
+    title: "Incoming Software Engineer Intern",
+    company_name: "Activision (Demonware)",
+    icon: activision,
+    iconBg: "#E6DEDD",
+    date: "Jan 2026 - Present",
+    points: [
+      "Demonware - Call of Duty",
+    ],
+  },
   {
     title: "Undergraduate Researcher",
     company_name: "Dalhousie University (MYTech Lab) / NSERC",
@@ -70,22 +81,17 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "May 2025 - Present",
     points: [
-      "Automated Cyber Defence (ACD) with Deep Reinforcement Learning (DRL).",
-      "Engineered agentic AI-based Autonomous Cyber Defence (ACD) agents using Pytorch, achieving an increase in general threat detection accuracy within Cyber Operations Research Gym (CybORG) simulations",
-      "Deployed a LangGraph-orchestrated LLM defence agent, cutting simulation false positives while providing transparent, natural-language rationales for every mitigation step.",
-      "Developed curiosity-driven PPO and ICM blue-team agents, boosting CybORG general threat-detection accuracy and establishing a baseline for ongoing research."
+      "Agentic AI for Autonomous Cyber Defence (ACD) using Deep Reinforcement Learning (DRL) and Large Language Models (LLMs)",
     ],
   },
   {
-    title: "Software Developer Intern",
+    title: "Software Engineer Intern",
     company_name: "Ansys (Synopsys)",
     icon: ansys,
     iconBg: "#E6DEDD",
     date: "Jan 2025 - May 2025",
     points: [
-      "Spearheaded the creation of a 50+ Cypress end-to-end test suite for Ansys Fluids WebUI, directly addressing 10+ critical UI bugs and accelerating the testing cycle by 15%.",
-      "Enhanced Computational Fluid Dynamics (CFD) simulation tools by improving front-end and back-end systems, increasing user efficiency by 25% and reducing simulation setup time by 15%.",
-      "Improved user experience and interface performance by optimizing graphics rendering and state management using Redux, resulting in a 30% reduction in UI latency and smoother interactions.",
+      "Ansys Fluids WebUI and SimBA",
     ],
   },
   {
@@ -94,19 +100,20 @@ const experiences = [
     icon: icpc,
     iconBg: "#E6DEDD",
     date: "Nov 2024 - Nov 2024",
-    points: ["Third Place in the Atlantic region."],
+    points: [
+      "ICPC Canada Atlantic 2025 - Rank 1st (Gold Medal)",
+      "ICPC NENA 2025",
+      "ICPC NENA 2024",
+    ],
   },
   {
-    title: "Software Developer Intern",
+    title: "Software Engineer Intern",
     company_name: "BOTR Solutions",
     icon: botr,
     iconBg: "#E6DEDD",
     date: "May 2024 - Aug 2024",
     points: [
-      "Revamped the company website with new designs, improving user experience and increasing engagement by 50%.",
-      "Automated CI/CD pipelines reducing deployment time by 60% and ensuring scalable, reliable delivery.",
-      "Developed comprehensive end-to-end backend systems for REST APIs, streamlining feature development.",
-      "Created infrastructure using AWS CDK for scalable, reliable deployments and automated alerting for downtime.",
+      "ETL Migration, CI/CD DevOps (AWS), RESTful API (Django)",
     ],
   },
   {
@@ -116,8 +123,10 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "May 2023 - Present",
     points: [
-      "Led and mentored 10 TAs, holding weekly coordination meetings and providing guidance on technical and instructional challenges to ensure smooth lab delivery for over 150 students.",
-      "Boosted practical knowledge of 150+ students in frontend and backend development by leading weekly labs, ensuring hands-on learning and application of DS&A, Frontend, Backend and Fullstack development concepts.",
+      "Server-Side Scripting (CSCI 2170)",
+      "Data Structures & Algorithms (CSCI 2110)",
+      "Experimental Robotics (CSCI 1108)",
+      "Web Development (CSCI 1170)",
     ],
   },
   {
@@ -127,10 +136,7 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "May 2023 - Dec 2023",
     points: [
-      "Migrated and rewrote a web app, enhancing UI/UX and code quality, resulting in a 20% performance boost.",
-      "Improved test coverage by introducing API and UI end-to-end tests, achieving a 20% reduction in reported issues.",
-      "Optimized RESTful and WebSocket services, increasing unit test coverage from 50% to 90%.",
-      "Ensured all automated tests were maintainable and scalable over time, contributing to long-term project success.",
+      "Angular to React Migration",
     ],
   },
 ];
@@ -274,66 +280,66 @@ const projects = [
     source_code_link: "https://github.com/HassanChowdhry/PodText-AI",
     demo_link: "https://podtext-ai.vercel.app",
   },
-  {
-    name: "Pixis",
-    description:
-      "Designed and developed a photography-centric full stack application with a user and database photo gallery, elevating engagement through the integration of profile photos.",
-    tags: [
-      {
-        name: "React",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Node.js",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Express.js",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "MySQL",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "AWS",
-        color: "orange-text-gradient",
-      },
-    ],
-    image: pixis,
-    source_code_link: "https://github.com/HassanChowdhry/Pixis",
-    demo_link: "https://github.com/HassanChowdhry/Pixis",
-  },
-  {
-    name: "Portfolio",
-    description:
-      "Engineered an interactive website showcasing technical skills, successful projects, and professional experience, leading to heightened user engagement, increased inquiries, and networking opportunities.",
-    tags: [
-      {
-        name: "React",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Vite",
-        color: "violet-text-gradient",
-      },
-      {
-        name: "Three.js",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "TailwindCSS",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Firebase",
-        color: "orange-text-gradient",
-      },
-    ],
-    image: portfolio,
-    source_code_link: "https://github.com/HassanChowdhry/Portfolio",
-    demo_link: "https://hassanchowdhry.com",
-  },
+  // {
+  //   name: "Pixis",
+  //   description:
+  //     "Designed and developed a photography-centric full stack application with a user and database photo gallery, elevating engagement through the integration of profile photos.",
+  //   tags: [
+  //     {
+  //       name: "React",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "Node.js",
+  //       color: "green-text-gradient",
+  //     },
+  //     {
+  //       name: "Express.js",
+  //       color: "pink-text-gradient",
+  //     },
+  //     {
+  //       name: "MySQL",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "AWS",
+  //       color: "orange-text-gradient",
+  //     },
+  //   ],
+  //   image: pixis,
+  //   source_code_link: "https://github.com/HassanChowdhry/Pixis",
+  //   demo_link: "https://github.com/HassanChowdhry/Pixis",
+  // },
+  // {
+  //   name: "Portfolio",
+  //   description:
+  //     "Engineered an interactive website showcasing technical skills, successful projects, and professional experience, leading to heightened user engagement, increased inquiries, and networking opportunities.",
+  //   tags: [
+  //     {
+  //       name: "React",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "Vite",
+  //       color: "violet-text-gradient",
+  //     },
+  //     {
+  //       name: "Three.js",
+  //       color: "pink-text-gradient",
+  //     },
+  //     {
+  //       name: "TailwindCSS",
+  //       color: "green-text-gradient",
+  //     },
+  //     {
+  //       name: "Firebase",
+  //       color: "orange-text-gradient",
+  //     },
+  //   ],
+  //   image: portfolio,
+  //   source_code_link: "https://github.com/HassanChowdhry/Portfolio",
+  //   demo_link: "https://hassanchowdhry.com",
+  // },
   // {
   //   name: "Google Links",
   //   description:

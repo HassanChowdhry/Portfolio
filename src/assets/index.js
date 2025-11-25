@@ -4,6 +4,7 @@ import menu from "./menu.svg";
 import close from "./close.svg";
 
 import dalhousie from "./company/dalhousie.png";
+import activision from "./company/Activision.svg";
 import upwork from "./company/upwork.png";
 import ansys from "./company/ansys.jpg";
 import botr from "./company/BOTR.jpg";
@@ -27,8 +28,7 @@ import deeprl from "./projects/deeprl.png";
 import { FaLinkedin } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
-import { FaUpwork } from "react-icons/fa6";
-
+import { FaGoogleScholar } from "react-icons/fa6";
 export {
   logo,
   github,
@@ -46,7 +46,7 @@ export {
   resume,
   FaLinkedin,
   FaGithub,
-  FaUpwork,
+  FaGoogleScholar,
   SiLeetcode,
   podtext_ai,
   oldbailey_ai,
@@ -56,5 +56,6 @@ export {
   botr,
   neurocode_ai,
   openllm,
-  deeprl
+  deeprl,
+  activision
 };
