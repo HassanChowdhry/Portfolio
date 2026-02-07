@@ -19,7 +19,7 @@ mdurl==0.1.2
 openai==1.35.10
 orjson==3.11.7
 pydantic==2.8.2
-pydantic_core==2.20.1
+pydantic_core==2.41.5
 Pygments==2.18.0
 python-dotenv==1.0.1
 python-multipart==0.0.9
