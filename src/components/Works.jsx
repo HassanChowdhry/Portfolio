@@ -1,4 +1,5 @@
-import { Tilt } from 'react-tilt';
+"use client";
+
 import { motion } from 'framer-motion';
 import { styles } from '../style';
 import { SectionWrapper } from '../hoc';
@@ -8,10 +9,8 @@ import { Wrapper } from './Wrapper';
 const ProjectCard = ({ index, name, description, tags, image, source_code_link, demo_link }) => {
   return (
     <Wrapper index={index} fade="up" type="spring" >
-      <Tilt options={{
-        max: 45, scale: 1, speed: 450
-      }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full image-box"
+      <div
+        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full image-box transition-transform duration-300 hover:scale-[1.02]"
       >
         <div className='relative w-full h-[230px]'>
           <img 
@@ -48,7 +47,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
             Live Demo
           </button>
         </div>
-      </Tilt>
+      </div>
     </Wrapper>
   )
 };

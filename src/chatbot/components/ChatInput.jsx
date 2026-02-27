@@ -1,3 +1,5 @@
+"use client";
+
 import { IoIosSend } from "react-icons/io";
 import { useState } from "react"
 

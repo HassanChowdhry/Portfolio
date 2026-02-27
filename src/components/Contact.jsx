@@ -1,11 +1,15 @@
+"use client";
+
 import { useState, useRef } from 'react'
+import dynamic from 'next/dynamic'
 import { motion } from 'framer-motion'
 import emailjs from '@emailjs/browser'
 
 import { styles } from '../style.js'
-import { EarthCanvas } from './canvas'
 import { SectionWrapper } from '../hoc'
 import { slideIn } from '../utils/motion.js'
+
+const EarthCanvas = dynamic(() => import('./canvas/Earth'), { ssr: false });
 
 const Contact = () => {
   const formRef = useRef();

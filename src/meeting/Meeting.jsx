@@ -1,22 +1,20 @@
-import { useNavigate } from "react-router-dom";
+"use client";
+
+import { useRouter } from "next/navigation";
+import Script from "next/script";
 import { styles } from '../style';
-import { useEffect } from "react";
 
 const Meeting = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
   const buttonStyle = "hover:scale-105 duration-300 max-w-[200px] min-w-[150px] hover:bg-button border border-tertiary bg-tertiary py-2 px-4 font-bold shadow-lg shadow-primary rounded-xl text-white"
-  useEffect(() => {
-    const head = document.querySelector('head');
-    const script = document.createElement('script');
-    script.setAttribute('src',  'https://static.zcal.co/embed/v1/embed.js');
-    head.appendChild(script);
-  }, [])
+
   return (
     <div className='bg-hero-pattern animate__animated animate__fadeIn min-h-screen'>
+      <Script src="https://static.zcal.co/embed/v1/embed.js" strategy="lazyOnload" />
       <div className="p-2 flex flex-row m-2 text-slate-50 gap-3">
         <button
           className={buttonStyle}
-          onClick={() => navigate("/")}
+          onClick={() => router.push("/")}
         >
           &larr; Go back
           </button>

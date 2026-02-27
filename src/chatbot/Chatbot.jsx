@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import Header from "./components/Header.jsx";
 import ChatStatus from "./components/ChatStatus.jsx";

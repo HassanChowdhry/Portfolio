@@ -1,8 +1,16 @@
+"use client";
+
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../utils/motion'
 
 export const Wrapper = ({fade, type, index, children, className }) => {
-  const isMobile = window.innerWidth < 850;
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 850);
+  }, []);
+
   return (
     <>
       {isMobile ? (<div>{children}</div>) : (
