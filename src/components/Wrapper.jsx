@@ -8,7 +8,24 @@ export const Wrapper = ({fade, type, index, children, className }) => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    setIsMobile(window.innerWidth < 850);
+    if (typeof window === 'undefined') {
+      return;
+    }
+
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 850);
+    };
+
+    // Set initial value on mount
+    handleResize();
+
+    // Update on resize
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup on unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   return (
