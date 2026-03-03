@@ -65,13 +65,13 @@ const services = [
 
 const experiences = [
   {
-    title: "Incoming Software Engineer Intern",
+    title: "Software Engineer Intern",
     company_name: "Activision (Demonware)",
     icon: activision,
     iconBg: "#E6DEDD",
     date: "Jan 2026 - Present",
     points: [
-      "Demonware - Call of Duty",
+      "Demonware - Call of Duty | Call of Duty",
     ],
   },
   {
@@ -86,12 +86,12 @@ const experiences = [
   },
   {
     title: "Software Engineer Intern",
-    company_name: "Ansys (Synopsys)",
+    company_name: "Synopsys (Ansys)",
     icon: ansys,
     iconBg: "#E6DEDD",
     date: "Jan 2025 - May 2025",
     points: [
-      "Ansys Fluids WebUI and SimBA",
+      "Fluids WebUI and SimBA",
     ],
   },
   {
