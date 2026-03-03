@@ -25,16 +25,18 @@ export default function HomePage() {
   );
 
   useEffect(() => {
+    let innerTimeoutId;
     if (isLoading) {
       const toRef = setTimeout(() => {
         setFadeClass("animate__animated animate__fadeOut");
-        setTimeout(() => {
+        innerTimeoutId = setTimeout(() => {
           setLoading(false);
           setFadeClass("animate__animated animate__fadeIn");
         }, 650);
       }, 1000);
       return () => {
         clearTimeout(toRef);
+        clearTimeout(innerTimeoutId);
       };
     }
   }, [isLoading]);
