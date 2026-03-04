@@ -1,6 +1,8 @@
 import { getAllPortfolioData } from "@/sanity/fetch";
 import HomePage from "@/src/components/HomePage";
 
+export const revalidate = 60;
+
 export default async function Page() {
   let cmsData = null;
   try {
