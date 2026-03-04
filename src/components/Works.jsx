@@ -3,10 +3,18 @@
 import { motion } from 'framer-motion';
 import { styles } from '../style';
 import { SectionWrapper } from '../hoc';
-import { projects } from '../constants';
+import { projects as fallbackProjects } from '../constants';
 import { Wrapper } from './Wrapper';
+import { urlFor } from '@/sanity/client';
 
-const ProjectCard = ({ index, name, description, tags, image, source_code_link, demo_link }) => {
+const ProjectCard = ({ index, name, description, tags, image, source_code_link, sourceCodeLink, demo_link, demoLink }) => {
+  const imageSrc = image?.asset
+    ? urlFor(image).width(720).url()
+    : image;
+
+  const resolvedSourceLink = source_code_link || sourceCodeLink;
+  const resolvedDemoLink = demo_link || demoLink;
+
   return (
     <Wrapper index={index} fade="up" type="spring" >
       <div
@@ -14,7 +22,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
       >
         <div className='relative w-full h-[230px]'>
           <img 
-            src={image} 
+            src={imageSrc} 
             alt={name} 
             className='w-full h-full object-fill rounded-2xl portfolio-image'
             loading="lazy"
@@ -36,13 +44,13 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
         <div className='content'>
           <button
             className="btn"
-            onClick={() => window.open(source_code_link, "_blank")}
+            onClick={() => window.open(resolvedSourceLink, "_blank")}
           >
             Github
           </button>
           <button
             className="btn"
-            onClick={() => window.open(demo_link, "_blank")}
+            onClick={() => window.open(resolvedDemoLink, "_blank")}
           >
             Live Demo
           </button>
@@ -52,7 +60,11 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
   )
 };
 
-const Works = () => {
+const Works = ({ projects: cmsProjects }) => {
+  const resolvedProjects = cmsProjects?.length
+    ? cmsProjects
+    : fallbackProjects;
+
   return (
     <>
       <motion.div>
@@ -72,7 +84,7 @@ const Works = () => {
         </motion.p>
       </div>
       <div className='mt-20 flex flex-wrap gap-7'>
-        {projects.map((project, index) => (
+        {resolvedProjects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
       </div>
