@@ -35,6 +35,10 @@ export const navLinks = [
     title: "Projects",
   },
   {
+    id: "publications",
+    title: "Publications",
+  },
+  {
     id: "contact",
     title: "Contact",
   },
@@ -420,4 +424,6 @@ const projects = [
   // },
 ];
 
-export { services, experiences, projects };
+const publications = [];
+
+export { services, experiences, projects, publications };

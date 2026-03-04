@@ -10,6 +10,7 @@ import {
   Hero,
   Navbar,
   Works,
+  Publications,
   Loader,
 } from "@/src/components";
 import Widget from "@/src/components/Widget";
@@ -36,11 +37,12 @@ export default function HomePage({ cmsData }) {
   const socialLinks = cmsData?.socialLinks;
   const experiences = cmsData?.experiences;
   const projects = cmsData?.projects;
+  const publications = cmsData?.publications;
 
   return (
     <div className="min-h-[100vh] relative z-0 bg-primary">
       <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-        <Navbar resumeUrl={settings?.resumeUrl} />
+        <Navbar />
         <AnimatePresence mode="wait">
           {isLoading ? (
             <motion.div
@@ -75,6 +77,7 @@ export default function HomePage({ cmsData }) {
       />
       <Experience experiences={experiences} />
       <Works projects={projects} />
+      <Publications publications={publications} />
 
       <div className="relative z-0">
         <Contact />

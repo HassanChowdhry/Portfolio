@@ -2,7 +2,8 @@ import siteSettings from "./schemas/siteSettings";
 import socialLink from "./schemas/socialLink";
 import experience from "./schemas/experience";
 import project from "./schemas/project";
+import publication from "./schemas/publication";
 
 export const schema = {
-  types: [siteSettings, socialLink, experience, project],
+  types: [siteSettings, socialLink, experience, project, publication],
 };

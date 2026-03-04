@@ -4,6 +4,7 @@ import {
   socialLinksQuery,
   experiencesQuery,
   projectsQuery,
+  publicationsQuery,
 } from "./queries";
 
 export async function getSiteSettings() {
@@ -22,13 +23,19 @@ export async function getProjects() {
   return client.fetch(projectsQuery);
 }
 
-export async function getAllPortfolioData() {
-  const [settings, socialLinks, experiences, projects] = await Promise.all([
-    getSiteSettings(),
-    getSocialLinks(),
-    getExperiences(),
-    getProjects(),
-  ]);
+export async function getPublications() {
+  return client.fetch(publicationsQuery);
+}
 
-  return { settings, socialLinks, experiences, projects };
+export async function getAllPortfolioData() {
+  const [settings, socialLinks, experiences, projects, publications] =
+    await Promise.all([
+      getSiteSettings(),
+      getSocialLinks(),
+      getExperiences(),
+      getProjects(),
+      getPublications(),
+    ]);
+
+  return { settings, socialLinks, experiences, projects, publications };
 }

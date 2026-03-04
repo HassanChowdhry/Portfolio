@@ -38,3 +38,16 @@ export const projectsQuery = groq`
     demoLink
   }
 `;
+
+export const publicationsQuery = groq`
+  *[_type == "publication"] | order(order asc){
+    title,
+    authors,
+    venue,
+    year,
+    abstract,
+    url,
+    citation,
+    tags
+  }
+`;
