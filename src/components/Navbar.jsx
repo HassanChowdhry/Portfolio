@@ -1,17 +1,20 @@
+"use client";
+
 import {useState} from 'react'
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { styles } from '../style';
 import { navLinks } from '../constants';
-import { logo, menu, close, resume } from '../assets';
+import { logo, menu, close, resume as fallbackResume } from '../assets';
 
-const Navbar = () => {
+const Navbar = ({ resumeUrl }) => {
+const resolvedResume = resumeUrl || fallbackResume;
 const [active, setActive] = useState("");
 const [toggle, setToggle] = useState(false);
 
   return (
     <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}>
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
-        <Link to="/" className='flex items-center gap-2' onClick={() => {
+        <Link href="/" className='flex items-center gap-2' onClick={() => {
           setActive("");
           window.scrollTo(0, 0);
         }}>
@@ -37,7 +40,7 @@ const [toggle, setToggle] = useState(false);
               hover:text-white text-[18px] font-medium cursor-pointer`}
             onClick={() => setActive("resume")}
           >
-            <a href={resume} download="Hassan_Resume">Resume</a>
+            <a href={resolvedResume} download="Hassan_Resume">Resume</a>
           </li>
         </ul>
   
@@ -72,7 +75,7 @@ const [toggle, setToggle] = useState(false);
                   setActive("resume");
                 }}
               >
-                <a href={resume} download="Hassan_Resume">Resume</a>
+                <a href={resolvedResume} download="Hassan_Resume">Resume</a>
               </li>              
             </ul>
           </div>

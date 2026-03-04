@@ -1,49 +1,62 @@
+"use client";
+
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component"
 import { motion } from 'framer-motion';
 import 'react-vertical-timeline-component/style.min.css'
 
 import { styles } from '../style';
-import { experiences } from '../constants';
+import { experiences as fallbackExperiences } from '../constants';
 import { SectionWrapper } from '../hoc';
+import { urlFor } from '@/sanity/client';
 
-const ExperienceCard = ({ experience }) => (
-  <VerticalTimelineElement
-    contentStyle={{ background: "#1d1836", color: "#fff" }}
-    contentArrowStyle={{ borderRight: "7px solid #232631" }}
-    date={experience.date}
-    iconStyle={{ background: experience.iconBg }}
-    icon={
-      <div className="flex justify-center items-center w-full h-full">
-        <img 
-          src={experience.icon}
-          alt={experience.company_name}
-          className="w-[80%] h-[80%] object-contain"
-          loading="lazy"
-        />
+const ExperienceCard = ({ experience }) => {
+  const iconSrc = experience.icon?.asset
+    ? urlFor(experience.icon).width(100).url()
+    : experience.icon;
+
+  return (
+    <VerticalTimelineElement
+      contentStyle={{ background: "#1d1836", color: "#fff" }}
+      contentArrowStyle={{ borderRight: "7px solid #232631" }}
+      date={experience.date || experience.dateRange}
+      iconStyle={{ background: experience.iconBg }}
+      icon={
+        <div className="flex justify-center items-center w-full h-full">
+          <img 
+            src={iconSrc}
+            alt={experience.company_name || experience.companyName}
+            className="w-[80%] h-[80%] object-contain"
+            loading="lazy"
+          />
+        </div>
+      }
+    >
+      <div>
+        <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
+        <p style={{ margin: 0 }} className="text-secondary text-[16px] font-semibold">
+          {experience.company_name || experience.companyName}
+        </p>
+
+        <ul className="mt-5 list-disc ml-5 space-y-2">
+          {experience.points.map((point, index) => (
+            <li
+              key={`experience-point-${index}`}
+              className="text-white-100 text-[14px] pl-1 tracking-wider"
+            >
+              {point}
+            </li>
+          ))}
+        </ul>
       </div>
-    }
-  >
-    <div>
-      <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
-      <p style={{ margin: 0 }} className="text-secondary text-[16px] font-semibold">
-        {experience.company_name}
-      </p>
+    </VerticalTimelineElement>
+  );
+}
 
-      <ul className="mt-5 list-disc ml-5 space-y-2">
-        {experience.points.map((point, index) => (
-          <li
-            key={`experience-point-${index}`}
-            className="text-white-100 text-[14px] pl-1 tracking-wider"
-          >
-            {point}
-          </li>
-        ))}
-      </ul>
-    </div>
-  </VerticalTimelineElement>
-)
+const Experience = ({ experiences: cmsExperiences }) => {
+  const resolvedExperiences = cmsExperiences?.length
+    ? cmsExperiences
+    : fallbackExperiences;
 
-const Experience = () => {
   return (
     <>
       <motion.div>
@@ -57,8 +70,8 @@ const Experience = () => {
 
       <div className="mt-20 flex flex-col">
         <VerticalTimeline>
-          {experiences.map((experiences, index) => (
-              <ExperienceCard key={index} experience={experiences} />
+          {resolvedExperiences.map((exp, index) => (
+              <ExperienceCard key={index} experience={exp} />
           ))}
         </VerticalTimeline>
 

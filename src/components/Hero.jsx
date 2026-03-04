@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useRef } from 'react';
 import { styles } from '../style';
 import { motion } from 'framer-motion';
@@ -6,7 +8,7 @@ import { SectionWrapper } from '../hoc';
 import QuickLinks from './QuickLinks';
 import lottie from 'lottie-web';
 
-const Hero = () => {
+const HeroInner = ({ resumeUrl, transcriptUrl, meetingLink }) => {
   const name = "Hassan".split('');
   const intro = "Hi I'm ".split('')
   const bio = "I am a Computer Science student at Dalhousie University.".split('');
@@ -49,7 +51,11 @@ const Hero = () => {
             </p>
           </motion.div>
 
-          <QuickLinks />
+          <QuickLinks
+            resumeUrl={resumeUrl}
+            transcriptUrl={transcriptUrl}
+            meetingLink={meetingLink}
+          />
         </section>
       </div>
       <div ref={ref} className='flex m-auto md:w-2/4 w-5/6' />
@@ -57,4 +63,5 @@ const Hero = () => {
   )
 }
 
-export default SectionWrapper(Hero, "hero");
+const Hero = SectionWrapper(HeroInner, "hero");
+export default Hero;

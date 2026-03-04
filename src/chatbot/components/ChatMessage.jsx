@@ -1,7 +1,8 @@
+"use client";
+
 import Markdown from 'react-markdown'
 import { FaRegUser } from "react-icons/fa6";
 import remarkGfm from "remark-gfm";
-import "./ChatMessage.css";
 
 export default function ChatMessage({ message, role }) {
   const isUser = role === "user";

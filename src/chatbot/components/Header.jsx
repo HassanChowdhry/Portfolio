@@ -1,13 +1,15 @@
-import { useNavigate } from "react-router-dom";
+"use client";
+
+import { useRouter } from "next/navigation";
 
 export default function Header({ onNewChat }) {
-  const navigate = useNavigate();
+  const router = useRouter();
   const buttonStyle = "hover:scale-105 duration-300 max-w-[200px] sm:min-w-[150px] text-[14px] md:text-[16px] w-[120px] hover:bg-button border border-tertiary bg-tertiary py-2 px-4 font-bold shadow-lg shadow-primary rounded-xl text-white"
   return (
     <div className="p-2 flex flex-row m-2 text-slate-50 gap-3">
       <button
         className={buttonStyle}
-        onClick={() => navigate("/")}
+        onClick={() => router.push("/")}
       >
         &larr; Go back
         </button>

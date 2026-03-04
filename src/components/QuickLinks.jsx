@@ -1,40 +1,40 @@
+"use client";
+
 import { motion } from 'framer-motion';
 import { fadeIn } from '../utils/motion';
-import { IoIosContact, IoIosContacts } from "react-icons/io";
 import { MdSchedule, MdScheduleSend } from "react-icons/md";
+import { HiOutlineDocumentArrowDown } from "react-icons/hi2";
+import { LuFileText, LuFileCheck } from "react-icons/lu";
 
-const QuickLinks = () => {  
+const QuickLinks = ({ resumeUrl, transcriptUrl, meetingLink }) => {
+  const resolvedResume = resumeUrl || "/resume.pdf";
+  const resolvedTranscript = transcriptUrl || "/transcript.pdf";
+  const resolvedMeeting = meetingLink || "https://zcal.co/hassanchowdhry/30min";
+
   return (
-    <div className='flex gap-5 flex-col md:flex-row'>
+    <div className='flex gap-5 flex-col md:flex-row flex-wrap'>
         <motion.div variants={fadeIn("up", "tween", 1*0.5, 1)} >
-          <a href='#contact'>
+          <a target='_blank' rel="noopener noreferrer" href={resolvedResume}>
             <button className="animated-button w-full">
-              <IoIosContacts className="arr-2" />
-              <span className="text">Contact Me</span>
+              <HiOutlineDocumentArrowDown className="arr-2" />
+              <span className="text">View Resume</span>
               <span className="circle"></span>
-              <IoIosContact className="arr-1" />
+              <HiOutlineDocumentArrowDown className="arr-1" />
             </button>
           </a>
         </motion.div>
-        {/* <motion.div variants={fadeIn("up", "tween", 2*0.5, 1)}>
-          <a href='#contact'>
-            <div className="box">
-              <button className="button">Contact Me</button>
-              <div className="space">
-                <span style={{'--i': 31}} className="star"></span>
-                <span style={{'--i': 12}} className="star"></span>
-                <span style={{'--i': 57}} className="star"></span>
-                <span style={{'--i': 93}} className="star"></span>
-                <span style={{'--i': 23}} className="star"></span>
-                <span style={{'--i': 70}} className="star"></span>
-                <span style={{'--i': 6}} className="star"></span>
-              </div>
-            </div>
-          </a>
-        </motion.div> */}
         <motion.div variants={fadeIn("up", "tween", 2*0.5, 1)} >
-          {/* <Link to='/meeting'> */}
-          <a target='blank' href="https://zcal.co/hassanchowdhry/30min">
+          <a target='_blank' rel="noopener noreferrer" href={resolvedTranscript}>
+            <button className="animated-button w-full">
+              <LuFileCheck className="arr-2" />
+              <span className="text">View Transcript</span>
+              <span className="circle"></span>
+              <LuFileText className="arr-1" />
+            </button>
+          </a>
+        </motion.div>
+        <motion.div variants={fadeIn("up", "tween", 3*0.5, 1)} >
+          <a target='_blank' rel="noopener noreferrer" href={resolvedMeeting}>
             <button className="animated-button w-full">
               <MdScheduleSend className="arr-2" />
               <span className="text">Schedule A Meeting</span>
@@ -42,7 +42,6 @@ const QuickLinks = () => {
               <MdSchedule className="arr-1" />
             </button>
           </a>
-          {/* </Link> */}
         </motion.div>
       </div>
   )
