@@ -18,21 +18,34 @@ const StarsCanvas = dynamic(() => import("@/src/components/canvas/Stars"), {
   ssr: false,
 });
 
+<<<<<<< Updated upstream
 export default function HomePage({ cmsData }) {
+=======
+export default function HomePage() {
+>>>>>>> Stashed changes
   const [isLoading, setLoading] = useState(true);
   const [fadeClass, setFadeClass] = useState(
     "animate__animated animate__fadeIn"
   );
 
   useEffect(() => {
+<<<<<<< Updated upstream
     if (isLoading) {
       const toRef = setTimeout(() => {
         setFadeClass("animate__animated animate__fadeOut");
         setTimeout(() => {
+=======
+    let innerTimeoutId;
+    if (isLoading) {
+      const toRef = setTimeout(() => {
+        setFadeClass("animate__animated animate__fadeOut");
+        innerTimeoutId = setTimeout(() => {
+>>>>>>> Stashed changes
           setLoading(false);
           setFadeClass("animate__animated animate__fadeIn");
         }, 650);
       }, 1000);
+<<<<<<< Updated upstream
       return () => clearTimeout(toRef);
     }
   }, [isLoading]);
@@ -46,27 +59,50 @@ export default function HomePage({ cmsData }) {
     <div className="min-h-[100vh] relative z-0 bg-primary">
       <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
         <Navbar resumeUrl={settings?.resumeUrl} />
+=======
+      return () => {
+        clearTimeout(toRef);
+        clearTimeout(innerTimeoutId);
+      };
+    }
+  }, [isLoading]);
+
+  return (
+    <div className="min-h-[100vh] relative z-0 bg-primary">
+      <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+        <Navbar />
+>>>>>>> Stashed changes
         {isLoading ? (
           <div className={fadeClass}>
             <Loader />
           </div>
         ) : (
           <div className={fadeClass}>
+<<<<<<< Updated upstream
             <Hero
               resumeUrl={settings?.resumeUrl}
               transcriptUrl={settings?.transcriptUrl}
               meetingLink={settings?.meetingLink}
             />
+=======
+            <Hero />
+>>>>>>> Stashed changes
           </div>
         )}
       </div>
 
+<<<<<<< Updated upstream
       <About
         aboutText={settings?.aboutText}
         socialLinks={socialLinks}
       />
       <Experience experiences={experiences} />
       <Works projects={projects} />
+=======
+      <About />
+      <Experience />
+      <Works />
+>>>>>>> Stashed changes
 
       <div className="relative z-0">
         <Contact />
@@ -77,3 +113,8 @@ export default function HomePage({ cmsData }) {
     </div>
   );
 }
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
