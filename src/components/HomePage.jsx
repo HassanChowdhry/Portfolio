@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   About,
   Contact,
@@ -12,31 +13,24 @@ import {
   Loader,
 } from "@/src/components";
 import Widget from "@/src/components/Widget";
-import "animate.css";
 
 const StarsCanvas = dynamic(() => import("@/src/components/canvas/Stars"), {
   ssr: false,
 });
 
+const fadeVariants = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1, transition: { duration: 0.5 } },
+  exit: { opacity: 0, transition: { duration: 0.5 } },
+};
+
 export default function HomePage({ cmsData }) {
   const [isLoading, setLoading] = useState(true);
-  const [fadeClass, setFadeClass] = useState(
-    "animate__animated animate__fadeIn"
-  );
 
   useEffect(() => {
-    let innerTimeoutId;
-    if (isLoading) {
-      const toRef = setTimeout(() => {
-        setFadeClass("animate__animated animate__fadeOut");
-        innerTimeoutId = setTimeout(() => {
-          setLoading(false);
-          setFadeClass("animate__animated animate__fadeIn");
-        }, 650);
-      }, 1000);
-      return () => clearTimeout(toRef);
-    }
-  }, [isLoading]);
+    const timer = setTimeout(() => setLoading(false), 1600);
+    return () => clearTimeout(timer);
+  }, []);
 
   const settings = cmsData?.settings;
   const socialLinks = cmsData?.socialLinks;
@@ -47,19 +41,32 @@ export default function HomePage({ cmsData }) {
     <div className="min-h-[100vh] relative z-0 bg-primary">
       <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
         <Navbar resumeUrl={settings?.resumeUrl} />
-        {isLoading ? (
-          <div className={fadeClass}>
-            <Loader />
-          </div>
-        ) : (
-          <div className={fadeClass}>
-            <Hero
-              resumeUrl={settings?.resumeUrl}
-              transcriptUrl={settings?.transcriptUrl}
-              meetingLink={settings?.meetingLink}
-            />
-          </div>
-        )}
+        <AnimatePresence mode="wait">
+          {isLoading ? (
+            <motion.div
+              key="loader"
+              variants={fadeVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+            >
+              <Loader />
+            </motion.div>
+          ) : (
+            <motion.div
+              key="hero"
+              variants={fadeVariants}
+              initial="initial"
+              animate="animate"
+            >
+              <Hero
+                resumeUrl={settings?.resumeUrl}
+                transcriptUrl={settings?.transcriptUrl}
+                meetingLink={settings?.meetingLink}
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
 
       <About

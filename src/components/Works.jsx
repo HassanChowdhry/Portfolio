@@ -6,6 +6,7 @@ import { SectionWrapper } from '../hoc';
 import { projects as fallbackProjects } from '../constants';
 import { Wrapper } from './Wrapper';
 import { urlFor } from '@/sanity/client';
+import useTilt from '../hooks/useTilt';
 
 const ProjectCard = ({ index, name, description, tags, image, source_code_link, sourceCodeLink, demo_link, demoLink }) => {
   const imageSrc = image?.asset
@@ -14,11 +15,13 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
 
   const resolvedSourceLink = source_code_link || sourceCodeLink;
   const resolvedDemoLink = demo_link || demoLink;
+  const tiltRef = useTilt({ max: 15, speed: 400, glare: true, "max-glare": 0.1 });
 
   return (
     <Wrapper index={index} fade="up" type="spring" >
       <div
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full image-box transition-transform duration-300 hover:scale-[1.02]"
+        ref={tiltRef}
+        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full image-box"
       >
         <div className='relative w-full h-[230px]'>
           <img 

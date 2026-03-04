@@ -7,10 +7,13 @@ import { services as fallbackServices } from '../constants';
 import { fadeIn } from '../utils/motion'
 import { SectionWrapper } from '../hoc';
 import { getIcon } from '../utils/iconMap';
+import useTilt from '../hooks/useTilt';
 
 const ServiceCard = ({index, title, Icon, link }) => {
+  const tiltRef = useTilt({ max: 30, speed: 300, glare: true, "max-glare": 0.2 });
+
   return (
-    <div className="xs:w-[250px] w-full transition-transform duration-300 hover:scale-105">
+    <div ref={tiltRef} className="xs:w-[250px] w-full">
       <motion.div 
         variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
         className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card cursor-pointer'
